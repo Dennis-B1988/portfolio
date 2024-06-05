@@ -1,0 +1,21 @@
+.header-content {
+    color: white;
+    padding: 37px 100px 37px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141D2F;
+}
+
+.header-left {
+    display: flex;
+    gap: 32px;
+}
+
+.header-right {
+    display: flex;
+    gap: 30px;
+    font-size: 23px;
+    line-height: 27.6px;
+}
+
