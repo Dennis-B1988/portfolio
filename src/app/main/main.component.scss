@@ -1,26 +1,39 @@
+@import '../styles/styles.component.scss';
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141D2F;
+}
+
 .header {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 100px;
-    max-width: 1440px;
+    width: 100%;
+    max-width: $maxWidth;
     border-bottom: 5px solid black;
     z-index: 10;
 }
 
 .footer {
     width: 100%;
-    max-width: 1440px;
+    max-width: $maxWidth;
 }
 
 .main {
     height: 100vh;
     width: 100%;
-    max-width: 1440px;
+    max-width: $maxWidth;
     position: relative;
-    z-index: 1;
     background-color: #141D2F;
+    overflow: hidden;
 }
 
 .main-content {
@@ -29,6 +42,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
 }
 
 .title{
@@ -77,35 +92,46 @@ h1 {
 }
 
 .socials-and-scroll-down{
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    align-items: flex-end;
+    margin-top: 150px;
     align-items: center;
     border: 1px solid white;
 }
 
-.socials {
+.socials-left{
     height: 100%;
     display: flex;
-    justify-content: flex-start;
     align-items: flex-end;
 }
 
-.scroll-down{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-    position: relative;
+.splash-top-left {
+    position: absolute;
+    top: 99px;
+    left: 0;
+    height: 608px;
+    // width: 572px;
+    z-index: 1;
+
+    >img {
+        height: 100%;
+        width: 100%;
+    }
 }
 
-.scroll-down-rotate {
-    // transform: rotate(90deg);
-    // transform-origin: left top;
-    // position: absolute;
-    // left: 0;
-    // top: 0;
-    // white-space: nowrap;
+.splash-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    // height: 573px;
+    // width: 679px;
+    z-index: 1;
+
+    >img {
+        height: 100%;
+        width: 100%;
+    }
 }
