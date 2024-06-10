@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skills } from '../../interfaces/interfaces.component';
 
 @Component({
   selector: 'app-skills',
@@ -8,5 +9,48 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  skill: Skills[] =  [
+    {
+      image: './assets/img/JavaScript.png',
+      name: 'JavaScript'
+    },
+    {
+      image: './assets/img/Angular.png',
+      name: 'Angular'
+    },
+    {
+      image: './assets/img/TypeScript.png',
+      name: 'TypeScript'
+    },
+    {
+      image: './assets/img/HTML.png',
+      name: 'HTML'
+    },
+    {
+      image: './assets/img/GIT.png',
+      name: 'GIT'
+    },
+    {
+      image: './assets/img/Firebase.png',
+      name: 'Firebase'
+    },
+    {
+      image: './assets/img/CSS.png',
+      name: 'CSS'
+    },
+    {
+      image: './assets/img/Scrum.png',
+      name: 'Scrum'
+    },
+    {
+      image: './assets/img/Rest-Api.png',
+      name: 'Rest-Api'
+    },
+    {
+      image: './assets/img/Material-design.png',
+      name: 'Material design'
+    }
+  ]
 
 }

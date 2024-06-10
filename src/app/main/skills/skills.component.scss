@@ -1,0 +1,126 @@
+.skills{
+    // background-image: url('../../assets/img/transition.png');
+    // height: 1000px;
+    margin-top: 277px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.transition{
+    position: absolute;
+    top: -280px;
+    z-index: -1;
+}
+
+.skill-container{
+    // max-width: 625px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 88px);
+    gap: 91px;
+}
+
+.skill-showcase{
+    height: 100px;
+    width: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    >img{
+        height: 60px;
+    }
+    >span{
+        text-align: center;
+    }
+}
+
+.skills-right-side{
+    height: 286px;
+    width: 572px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    // gap: 50px;
+}
+
+.skills-right-side-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.purple-line {
+    height: 4px;
+    width: 289px;
+    background-color: #D61CE6;
+}
+
+.skills-right-side-bottom{
+    margin-right: 10px;
+    >span{
+        line-height: 19.2px;
+    }
+}
+
+.skill-container .skill-showcase:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.skill-container .skill-showcase:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.skill-container .skill-showcase:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.skill-container .skill-showcase:nth-child(4) {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.skill-container .skill-showcase:nth-child(5) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.skill-container .skill-showcase:nth-child(6) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.skill-container .skill-showcase:nth-child(7) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.skill-container .skill-showcase:nth-child(8) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.skill-container .skill-showcase:nth-child(9) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.skill-container .skill-showcase:nth-child(10) {
+    grid-column: 1;
+    grid-row: 4;
+}

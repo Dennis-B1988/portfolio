@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+export interface Skills {
+  image: string;
+  name: string;
+}
 
-@Component({
-  selector: 'app-interfaces',
-  standalone: true,
-  imports: [],
-  templateUrl: './interfaces.component.html',
-  styleUrl: './interfaces.component.scss'
-})
-export class InterfacesComponent {
 
+export interface Portfolio {
+  image: string;
+  name: string;
+  url: string;
 }

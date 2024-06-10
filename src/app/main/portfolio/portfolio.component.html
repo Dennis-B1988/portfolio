@@ -1,1 +1,22 @@
-<p>portfolio works!</p>
+<div class="portfolio">
+  <div class="portfolio-headline">
+    <div class="portfolio-headline-top">
+      <div class="red-line"></div>
+      <span class="title">Portfolio</span>
+    </div>
+    <span class="sub-title"
+      >This page is a sample of my work! scroll down to view other projects I
+      have developed.</span
+    >
+  </div>
+
+  <div class="portfolio-container">
+    @for (portfolio of portfolio; track $index) {
+    <div class="portfolio-content">
+      <a href="{{ portfolio.url }}">
+        <img src="{{ portfolio.image }}" alt="" />
+      </a>
+    </div>
+    }
+  </div>
+</div>

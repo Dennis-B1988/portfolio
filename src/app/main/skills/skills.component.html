@@ -1,1 +1,30 @@
-<p>skills works!</p>
+<div class="skills">
+  <img class="transition" src="./assets/img/transition.png" alt="" />
+
+  <div class="skill-container">
+    @for (skill of skill; track $index) {
+    <div class="skill-showcase">
+      <img src="{{ skill.image }}" alt="" />
+      <span>{{ skill.name }}</span>
+    </div>
+    }
+  </div>
+
+  <div class="skills-right-side">
+    <div class="skills-right-side-top">
+      <div class="title">
+        <span>Skills</span>
+      </div>
+      <div class="purple-line"></div>
+    </div>
+
+    <div class="skills-right-side-bottom">
+      <span
+        >I have gained experience in building projects with various front end
+        technologies and concepts.</span
+      >
+    </div>
+
+    <button class="orange-btn">Get in touch</button>
+  </div>
+</div>
