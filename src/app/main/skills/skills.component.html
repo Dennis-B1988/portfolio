@@ -1,12 +1,12 @@
-<div class="skills">
+<div class="skills" id="skills">
   <img class="transition" src="./assets/img/transition.png" alt="" />
 
   <div class="skill-container">
     @for (skill of skill; track $index) {
-    <div class="skill-showcase">
-      <img src="{{ skill.image }}" alt="" />
-      <span>{{ skill.name }}</span>
-    </div>
+      <div class="skill-showcase">
+        <img src="{{ skill.image }}" alt="" />
+        <span>{{ skill.name }}</span>
+      </div>
     }
   </div>
 

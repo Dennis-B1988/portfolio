@@ -1,4 +1,4 @@
-<div class="portfolio">
+<div class="portfolio" id="portfolio">
   <div class="portfolio-headline">
     <div class="portfolio-headline-top">
       <div class="red-line"></div>
@@ -12,11 +12,11 @@
 
   <div class="portfolio-container">
     @for (portfolio of portfolio; track $index) {
-    <div class="portfolio-content">
-      <a href="{{ portfolio.url }}">
-        <img src="{{ portfolio.image }}" alt="" />
-      </a>
-    </div>
+      <div class="portfolio-content">
+        <a href="{{ portfolio.url }}">
+          <img src="{{ portfolio.image }}" alt="" />
+        </a>
+      </div>
     }
   </div>
 </div>

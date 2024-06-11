@@ -17,5 +17,14 @@
     gap: 30px;
     font-size: 23px;
     line-height: 27.6px;
+    >a {
+        text-decoration: none;
+        >:hover {
+            color: #FA7902;
+        }
+    }
 }
+
+
+
 
