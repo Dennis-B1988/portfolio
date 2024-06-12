@@ -14,7 +14,9 @@
     @for (portfolio of portfolio; track $index) {
       <div class="portfolio-content">
         <a href="{{ portfolio.url }}">
-          <img src="{{ portfolio.image }}" alt="" />
+          <div class="porfolio-image">
+            <img src="{{ portfolio.image }}" alt="" />
+          </div>
         </a>
       </div>
     }

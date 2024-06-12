@@ -1,7 +1,14 @@
 <div class="footer-content">
   <div class="footer-left">
     <span>Dennis</span>
-    <span class="impressum">Impressum</span>
+    <a
+      href=""
+      class="impressum"
+      (mouseover)="mouseover = false"
+      (mouseout)="mouseover = true"
+      >Impressum</a
+    >
+    <div class="impressum-underline" [class.v-hidden]="mouseover"></div>
   </div>
   <div class="footer-middle">
     <span>©</span>

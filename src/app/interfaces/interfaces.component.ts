@@ -8,4 +8,5 @@ export interface Portfolio {
   image: string;
   name: string;
   url: string;
+  github: string;
 }

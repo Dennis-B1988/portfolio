@@ -12,24 +12,28 @@ export class PortfolioComponent {
 
   portfolio: Portfolio[] = [
     {
-      image: '',
-      name: 'Portfolio 1',
-      url: 'https://dennis-portfolio-1.netlify.app/'
+      image: './assets/img/el_pollo_loco.png',
+      name: 'EL POLLO LOCO',
+      url: '',
+      github: 'https://github.com/Dennis-B1988/EL_POLLO_LOCO'
+    },
+    {
+      image: './assets/img/join.png',
+      name: 'JOIN',
+      url: '',
+      github: 'https://github.com/Dennis-B1988/join'
+    },
+    {
+      image: './assets/img/pokedex.png',
+      name: 'Pokedex',
+      url: '',
+      github: 'https://github.com/Dennis-B1988/pokedex'
     },
     {
       image: '',
-      name: 'Portfolio 2',
-      url: 'https://dennis-portfolio-2.netlify.app/'
-    },
-    {
-      image: '',
-      name: 'Portfolio 3',
-      url: 'https://dennis-portfolio-3.netlify.app/'
-    },
-    {
-      image: '',
-      name: 'Portfolio 4',
-      url: 'https://dennis-portfolio-4.netlify.app/'
+      name: 'Placeholder',
+      url: '',
+      github: ''
     },
   ]
 }

@@ -40,8 +40,21 @@
 
 .portfolio-content{
     height: 603px;
-    width: 603px;
+    width: 42%;
     border: 1px solid #E86F00;
     border-radius: 15px;
-    background-color: #141D2F;
+    background: linear-gradient(120deg, #141D2F, #0A0F18, #0A0F18, #141D2F);
+}
+
+.porfolio-image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >img {
+        height: 55%;
+        max-width: 90%;
+        border-radius: 15px;
+    }
 }
