@@ -35,4 +35,10 @@ button {
     margin-top: 50px;
     font-size: 23px;
     line-height: 27.6px;
+    transform-origin: top left;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        transform: scale(1.2);
+        background-color: #FF4747;
+    }
 }

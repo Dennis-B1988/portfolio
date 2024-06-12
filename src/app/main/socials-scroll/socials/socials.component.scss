@@ -12,3 +12,14 @@
     width: 100px;
     background-color: #DF6B01;
 }
+
+a{
+    display: flex;
+    align-items: center;
+    // transform-origin: left;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        transform: scale(1.5);
+    }
+}

@@ -4,7 +4,7 @@
   <div class="skill-container">
     @for (skill of skill; track $index) {
       <div class="skill-showcase">
-        <img src="{{ skill.image }}" alt="" />
+        <img src="{{ skill.image }}" alt="" class="skill-image" />
         <span>{{ skill.name }}</span>
       </div>
     }
@@ -25,6 +25,6 @@
       >
     </div>
 
-    <button class="orange-btn">Get in touch</button>
+    <button (click)="scrollDown()" class="orange-btn">Get in touch</button>
   </div>
 </div>

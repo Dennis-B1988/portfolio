@@ -40,6 +40,31 @@
     }
 }
 
+.skill-image{
+    transform: transform 0.5 ease-in-out;
+    &:hover{
+        animation: whip 0.8s ease-in-out;
+    }
+}
+
+@keyframes whip {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .skills-right-side{
     height: 286px;
     width: 572px;

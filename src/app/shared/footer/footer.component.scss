@@ -3,4 +3,54 @@
     width: 100%;
     border-top: 4px solid #E86F00;
     background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.footer-middle {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+}
+
+.footer-right {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.socials {
+    height: 40px;
+    width: 373px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.5);
+    }
 }

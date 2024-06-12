@@ -3,8 +3,26 @@
     <span>Dennis</span>
   </div>
   <div class="header-right">
-    <a href="#about-me"><span>About me</span></a>
-    <a href="#skills"><span>Skills</span></a>
-    <a href="#portfolio"><span>Portfolio</span></a>
+    <div class="header-links">
+      <a href="#about-me"><span>About me</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#about-me')"
+      ></div>
+    </div>
+    <div class="header-links">
+      <a href="#skills"><span>Skills</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#skills')"
+      ></div>
+    </div>
+    <div class="header-links">
+      <a href="#portfolio"><span>Portfolio</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#portfolio')"
+      ></div>
+    </div>
   </div>
 </div>

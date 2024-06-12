@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../../app.component';
 import { Skills } from '../../interfaces/interfaces.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [AppComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  constructor(private app: AppComponent) {}
+
 
   skill: Skills[] =  [
     {
@@ -52,5 +56,9 @@ export class SkillsComponent {
       name: 'Material design'
     }
   ]
+
+  scrollDown() {
+    this.app.scrollToContacts();
+  }
 
 }

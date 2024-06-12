@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppComponent } from '../app.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { HeaderComponent } from '../shared/header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -19,11 +20,17 @@ import { SocialsComponent } from './socials-scroll/socials/socials.component';
     ScrollDownComponent, 
     SkillsComponent, 
     PortfolioComponent, 
-    ContactComponent
+    ContactComponent,
+    AppComponent
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
 
+  constructor(private app: AppComponent) {}
+
+  scrollDown() {
+    this.app.scrollToContacts();
+  }
 }
