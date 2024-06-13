@@ -6,7 +6,11 @@ export interface Skills {
 
 export interface Portfolio {
   image: string;
+  image_hover: string;
   name: string;
   url: string;
   github: string;
+  description: string;
+  skills: string;
+  hover: boolean;
 }

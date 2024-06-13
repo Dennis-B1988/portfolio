@@ -11,15 +11,7 @@
   </div>
 
   <div class="portfolio-container">
-    @for (portfolio of portfolio; track $index) {
-      <div class="portfolio-content">
-        <a href="{{ portfolio.url }}">
-          <div class="porfolio-image">
-            <img src="{{ portfolio.image }}" alt="" />
-          </div>
-        </a>
-      </div>
-    }
+    <app-projects class="portfolio-container-content"></app-projects>
   </div>
 
   <div class="splash-right">

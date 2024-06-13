@@ -24,5 +24,61 @@
         [class.v-hidden]="!isActive('#portfolio')"
       ></div>
     </div>
+    <div class="header-language">
+      <span class="german">DE</span>
+      <span class="pipe">|</span>
+      <span class="english">EN</span>
+    </div>
+
+    <div
+      class="burger-menu"
+      (click)="toggleMenu()"
+      [class.d-none]="burgerMenuOpen"
+    >
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div
+      class="close-mobile-menu"
+      (click)="toggleMenu()"
+      [class.d-none]="!burgerMenuOpen"
+    >
+      X
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu" [class.d-none]="!burgerMenuOpen">
+  <div class="mobile-menu-links">
+    <div class="mobile-links">
+      <a href="#about-me" (click)="toggleMenu()"><span>About me</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#about-me')"
+      ></div>
+    </div>
+    <div class="mobile-links">
+      <a href="#skills" (click)="toggleMenu()"><span>Skills</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#skills')"
+      ></div>
+    </div>
+    <div class="mobile-links">
+      <a href="#portfolio" (click)="toggleMenu()"><span>Portfolio</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#portfolio')"
+      ></div>
+    </div>
+    <div class="mobile-links">
+      <a href="#contacts" (click)="toggleMenu()"><span>Contacts</span></a>
+      <div
+        class="header-links-underline"
+        [class.v-hidden]="!isActive('#contacts')"
+      ></div>
+    </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
-<section class="content" id="content">
-  <div class="main">
-    <app-header class="header"></app-header>
+<section id="content" class="content">
+  <app-header class="header"></app-header>
+
+  <div class="main" [class.d-none]="isMenuOpen">
     <div class="main-content">
       <div class="title">
         <div class="title-left-rotate">
@@ -38,7 +39,39 @@
     <app-portfolio></app-portfolio>
 
     <app-contact id="contacts"></app-contact>
+    <app-footer class="footer"></app-footer>
   </div>
 
-  <app-footer class="footer"></app-footer>
+  <!-- <div class="mobile-menu" [class.d-none]="!isMenuOpen">
+    <div class="mobile-menu-links">
+      <div class="mobile-links">
+        <a href="#about-me"><span>About me</span></a>
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#about-me')"
+        ></div>
+      </div>
+      <div class="mobile-links">
+        <a href="#skills"><span>Skills</span></a>
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#skills')"
+        ></div>
+      </div>
+      <div class="mobile-links">
+        <a href="#portfolio"><span>Portfolio</span></a>
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#portfolio')"
+        ></div>
+      </div>
+      <div class="mobile-links">
+        <a href="#contacts" (click)="toggleMobile()"><span>Contacts</span></a>
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#contacts')"
+        ></div>
+      </div>
+    </div>
+  </div> -->
 </section>

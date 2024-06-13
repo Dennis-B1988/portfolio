@@ -11,7 +11,6 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'portfolio';
 
-
   scrollToContacts() {
     const element = document.getElementById('contacts');
     if (element) {

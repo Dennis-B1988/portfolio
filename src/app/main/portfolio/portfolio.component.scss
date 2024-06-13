@@ -31,35 +31,12 @@
     margin-left: 100px;
 }
 
-.portfolio-container{
+.portfolio-container-content{
     margin-top: 100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
-}
-
-.portfolio-content{
-    height: 603px;
-    width: 42%;
-    border: 1px solid #E86F00;
-    border-radius: 15px;
-    background: linear-gradient(120deg, #141D2F, #0A0F18, #0A0F18, #141D2F);
-    position: relative;
-    z-index: 5;
-}
-
-.porfolio-image{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    >img {
-        height: 55%;
-        max-width: 90%;
-        border-radius: 15px;
-    }
 }
 
 .splash-right{
