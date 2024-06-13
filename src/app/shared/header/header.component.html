@@ -25,9 +25,21 @@
       ></div>
     </div>
     <div class="header-language">
-      <span class="german">DE</span>
+      <div class="german">
+        <span>DE</span>
+        <div
+          class="language-links-underline"
+          [class.v-hidden]="!languageGerman"
+        ></div>
+      </div>
       <span class="pipe">|</span>
-      <span class="english">EN</span>
+      <div class="english">
+        <span>EN</span>
+        <div
+          class="language-links-underline"
+          [class.v-hidden]="!languageEnglish"
+        ></div>
+      </div>
     </div>
 
     <div
@@ -79,6 +91,24 @@
         class="header-links-underline"
         [class.v-hidden]="!isActive('#contacts')"
       ></div>
+    </div>
+
+    <div class="mobile-language">
+      <div class="german">
+        <span>DE</span>
+        <div
+          class="mobile-language-links-underline"
+          [class.v-hidden]="!languageGerman"
+        ></div>
+      </div>
+      <span class="pipe">|</span>
+      <div class="english">
+        <span>EN</span>
+        <div
+          class="mobile-language-links-underline"
+          [class.v-hidden]="!languageEnglish"
+        ></div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainComponent } from '../../main/main.component';
 
@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   currentRoute: string = '';
   burgerMenuOpen = false;
+  languageGerman = true;
+  languageEnglish = false;
 
   constructor(private router: Router, private main: MainComponent) {
     this.router.events.subscribe(() => {
@@ -30,12 +32,6 @@ export class HeaderComponent implements OnInit {
     return this.currentRoute.includes(route);
   }
 
-
-  // toggleMenu() {
-  //   this.toggleStateService.toggle();
-  //   console.log(this.burgerMenuOpen);
-  // }
-
   toggleMenu() {
     this.main.toggleMobile();
     if(this.burgerMenuOpen) {
@@ -45,5 +41,17 @@ export class HeaderComponent implements OnInit {
       this.burgerMenuOpen = true;
     console.log(this.burgerMenuOpen);
     }  
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkWindowSize();
+  }
+
+  checkWindowSize() {
+    if (window.innerWidth > 390) {
+      this.burgerMenuOpen = false;
+      this.main.isMenuOpen = false;
+    }
   }
 }

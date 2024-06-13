@@ -48,6 +48,16 @@
     gap: 10px;
 }
 
+.german,
+.english {
+    cursor: pointer;
+}
+
+.language-links-underline{
+    width: 25px;
+    border: 2px solid #FF4747;
+}
+
 @media (max-width: 390px) {
     .header-content {
         padding: 37px 25px 37px 25px;
@@ -109,9 +119,19 @@
         }
     }
 
+    .mobile-language{
+        display: flex;
+        gap: 10px;
+    }
+
     .header-links-underline {
         width: 55.5px;
         border: 3px solid #FF4747;
+    }
+
+    .mobile-language-links-underline{
+        width: 22.5px;
+        border: 2px solid #FF4747;
     }
 }
 
