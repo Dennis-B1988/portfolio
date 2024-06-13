@@ -1,5 +1,6 @@
 .portfolio{
     margin-top: 130px;
+    position: relative;
 }
 
 .portfolio-headline{
@@ -17,7 +18,7 @@
 
 .red-line{
     height: 4px;
-    width: 50px;
+    width: 8.8%;
     background-color: #FF4747;
 }
 
@@ -44,6 +45,8 @@
     border: 1px solid #E86F00;
     border-radius: 15px;
     background: linear-gradient(120deg, #141D2F, #0A0F18, #0A0F18, #141D2F);
+    position: relative;
+    z-index: 5;
 }
 
 .porfolio-image{
@@ -57,4 +60,16 @@
         max-width: 90%;
         border-radius: 15px;
     }
+}
+
+.splash-right{
+    position: absolute;
+    top: -250px;
+    right: -400px;
+}
+
+.splash-left{
+    position: absolute;
+    bottom: -250px;
+    left: -600px;
 }

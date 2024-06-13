@@ -9,14 +9,14 @@
 
 .orange-line{
     height: 4px;
-    width: 100px;
+    // width: 100px;
+    width: 26.8%;
     background-color: #DF6B01;
 }
 
 a{
     display: flex;
     align-items: center;
-    // transform-origin: left;
     transition: all 0.2s ease-in-out;
 
     &:hover{

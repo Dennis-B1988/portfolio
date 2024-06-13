@@ -102,9 +102,7 @@ h1 {
 .splash-top-left {
     position: absolute;
     top: 99px;
-    left: 0;
-    height: 608px;
-    // width: 572px;
+    left: -200px;
     z-index: 1;
     >img {
         height: 100%;
@@ -115,9 +113,7 @@ h1 {
 .splash-top-right {
     position: absolute;
     top: 0;
-    right: 0;
-    // height: 573px;
-    // width: 679px;
+    right: -450px;
     z-index: 1;
     >img {
         height: 100%;
