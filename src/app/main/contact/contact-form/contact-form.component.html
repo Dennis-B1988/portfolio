@@ -5,7 +5,6 @@
         type="text"
         [(ngModel)]="name"
         (focus)="clearPlaceholderName()"
-        (blur)="putPlaceholderName()"
         placeholder="Your name"
         [class.success-border]="isValidName()"
         [class.error-border]="name.length < 2 && name !== 'Your name'"
@@ -28,7 +27,6 @@
         type="email"
         [(ngModel)]="email"
         (focus)="clearPlaceholderEmail()"
-        (blur)="putPlaceholderEmail()"
         placeholder="Your email"
         [class.success-border]="isValidEmail(email)"
         [class.error-border]="!isValidEmail(email) && email !== 'Your email'"
@@ -50,7 +48,6 @@
       <textarea
         [(ngModel)]="message"
         (focus)="clearPlaceholderMessage()"
-        (blur)="putPlaceholderMessage()"
         placeholder="Your message"
         [class.success-border]="isValidMessage()"
         [class.error-border]="!isValidMessage() && message !== 'Your message'"

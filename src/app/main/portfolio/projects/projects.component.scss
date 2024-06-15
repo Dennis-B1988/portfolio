@@ -144,6 +144,41 @@
     color: #FA7902;
 }
 
-// .d-none{
-//     display: none;
-// }
+@media (max-width: 390px) {
+    .project-content {
+        height: 340px;
+        width: 90%;
+    }
+
+    .project-buttons {
+        width: 80%;
+        top: 70px;
+
+        >a {
+            font-size: 16px;
+        }
+    }
+
+    .project-text {
+        padding: 0 25px 0 25px;
+        gap: 11px;
+
+        >span {
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    .project-name {
+        font-size: 23px;
+        line-height: 27.6px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+
+    .project-skills {
+        font-size: 16px;
+    }
+}

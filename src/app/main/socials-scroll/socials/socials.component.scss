@@ -1,6 +1,6 @@
 .social-content{
     height: 40px;
-    width: 373px;
+    width: 172%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,6 @@
 
 .orange-line{
     height: 4px;
-    // width: 100px;
     width: 26.8%;
     background-color: #DF6B01;
 }
@@ -21,5 +20,15 @@ a{
 
     &:hover{
         transform: scale(1.5);
+    }
+}
+
+@media (max-width: 390px) {
+    .social-content{
+        width: 130%;
+    }
+
+    .orange-line {
+        width: 23%;
     }
 }

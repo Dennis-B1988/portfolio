@@ -1,13 +1,10 @@
 .skills{
-    // background-image: url('../../assets/img/transition.png');
-    // height: 1000px;
     margin-top: 277px;
     position: relative;
     z-index: 5;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .transition{
@@ -17,11 +14,10 @@
 }
 
 .skill-container{
-    // max-width: 625px;
     margin-left: 100px;
     display: grid;
     grid-template-columns: repeat(4, 88px);
-    gap: 91px;
+    gap: 80px;
 }
 
 .skill-showcase{
@@ -66,13 +62,12 @@
 }
 
 .skills-right-side{
-    height: 286px;
-    width: 572px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    // gap: 50px;
+    gap: 15px;
 }
 
 .skills-right-side-top{
@@ -89,7 +84,6 @@
 
 .purple-line {
     height: 4px;
-    // width: 289px;
     width: 50.5%;
     background-color: #D61CE6;
 }
@@ -149,4 +143,102 @@
 .skill-container .skill-showcase:nth-child(10) {
     grid-column: 1;
     grid-row: 4;
+}
+
+.orange-btn-mobile{
+    display: none;
+}
+
+@media (max-width: 390px) {
+    .transition{
+        display: none;
+    }
+
+    .skills {
+        margin-top: 150px;
+        flex-direction: column;
+        justify-content: start;
+        gap: 50px;
+    }
+
+    .skill-container{
+        order: 2;
+        width: 90%;
+        gap: 0;
+        margin-left: 0;
+    }
+
+    .skill-showcase {
+        height: 100px;
+        width: unset;
+        gap: 10px;
+
+        >img {
+            height: unset;
+            width: 45px;
+        }
+
+        >span {
+            font-size: 14px;
+        }
+    }
+
+    .skills-right-side{
+        order: 1;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .skills-right-side-top {
+        width: 100%;
+        justify-content: flex-end;
+        gap: 35px;
+    }
+
+    .title {
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 54px;
+    }
+
+    .purple-line {
+        height: 4px;
+        width: 50.5%;
+        background-color: #D61CE6;
+    }
+
+    .skills-right-side-bottom {
+        width: 100%;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+
+        >span {
+            width: 80%;
+        }
+    }
+
+    .orange-btn{
+        display: none;
+    }
+
+    .orange-btn-mobile{
+        order: 3;
+        display: block;
+        background-color: #E86F00;
+        padding: 15px 30px 15px 30px;
+        box-shadow: 4px 4px 4px 0px #00000040;
+        border-radius: 10px;
+        margin-top: 0;
+        font-size: 23px;
+        line-height: 27.6px;
+        transform-origin: top left;
+        transition: all 0.2s ease-in-out;
+    
+        &:hover {
+            transform: scale(1.2);
+            background-color: #FF4747;
+        }
+    }
 }

@@ -57,12 +57,16 @@
       (click)="toggleMenu()"
       [class.d-none]="!burgerMenuOpen"
     >
-      X
+      <img src="./assets/img/Close.png" alt="" />
     </div>
   </div>
 </div>
 
-<div class="mobile-menu" [class.d-none]="!burgerMenuOpen">
+<div
+  class="mobile-menu"
+  [class.absolute]="burgerMenuOpen"
+  [class.d-none]="!burgerMenuOpen"
+>
   <div class="mobile-menu-links">
     <div class="mobile-links">
       <a href="#about-me" (click)="toggleMenu()"><span>About me</span></a>

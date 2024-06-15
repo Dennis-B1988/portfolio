@@ -32,13 +32,16 @@ export class HeaderComponent implements OnInit {
     return this.currentRoute.includes(route);
   }
 
+
   toggleMenu() {
     this.main.toggleMobile();
     if(this.burgerMenuOpen) {
       this.burgerMenuOpen = false;
+      document.body.style.overflow = 'unset';
     console.log(this.burgerMenuOpen);
     } else {
       this.burgerMenuOpen = true;
+      document.body.style.overflow = 'hidden';
     console.log(this.burgerMenuOpen);
     }  
   }

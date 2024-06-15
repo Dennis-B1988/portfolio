@@ -48,7 +48,8 @@
 .title{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
+    // gap: 35px;
     margin-top: 297px;
 }
 
@@ -98,6 +99,11 @@ h1 {
     align-items: flex-end;
 }
 
+.about-me{
+    width: 100%;
+    position: relative;
+}
+
 .splash-top-left {
     position: absolute;
     top: 99px;
@@ -129,33 +135,88 @@ h1 {
 }
 
 @media (max-width: 390px) {
-    .mobile-menu{
-        height: 100vh;
+    .title {
         width: 100%;
-        background-color: #414856;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin-left: 10px;
     }
 
-    .mobile-menu-links{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 29px;
+    h1 {
+        font-size: 45px;
+        line-height: 54px;
     }
 
-    .mobile-links{
-        font-size: 23px;
+    .title-left-rotate {
+        transform: rotate(-90deg);
+        font-size: 32px;
+        line-height: 38.4px;
+        // height: 100px;
+        width: 66px;
         
-        >a {
-            text-decoration: none;
+        >span{
+            height: 100%;
         }
     }
 
-    .header-links-underline{
-        width: 55.5px;
-        border: 3px solid #FF4747;
+    .title-right {
+        display: flex;
+        flex-direction: column;
+        // gap: 6px;
     }
+
+    .title-red-font {
+        color: #FE4646;
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+
+
+    .splash-top-left{
+        top: 120px;
+        left: -250px;
+
+        >img{
+            height: 70%;
+            width: 70%;
+        }
+    }
+
+    .splash-top-right{
+        top: 250px;
+        right: -630px;
+        >img{
+            height: 60%;
+            width: 60%;
+        }
+    }
+
+    // .mobile-menu{
+    //     height: 100vh;
+    //     width: 100%;
+    //     background-color: #414856;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+    // .mobile-menu-links{
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: flex-start;
+    //     gap: 29px;
+    // }
+
+    // .mobile-links{
+    //     font-size: 23px;
+        
+    //     >a {
+    //         text-decoration: none;
+    //     }
+    // }
+
+    // .header-links-underline{
+    //     width: 55.5px;
+    //     border: 3px solid #FF4747;
+    // }
 }

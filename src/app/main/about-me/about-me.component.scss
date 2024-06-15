@@ -1,4 +1,4 @@
-.about-me{
+.about-me-content{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -56,4 +56,96 @@
     position: absolute;
     top: -150px;
     right: 0;
+}
+
+.transition{
+    display: none;
+}
+
+@media (max-width: 390px) {
+    .transition{
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 900px;
+        z-index: 4;
+    }
+
+    .about-me-content{
+        width: 80%;
+        margin-top: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 0;
+    }
+
+    .about-me-headline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        >span {
+            font-size: 45px;
+            font-weight: 700;
+            line-height: 54px;
+        }
+        >p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+        }
+    }
+
+    .information{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .information-first{
+        align-items: center;
+        gap: 49px;
+
+        >img{
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .information-second {
+        align-items: center;
+        gap: 35px;
+
+        >img {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .first-img, .second-img{
+        height: 100%;
+    }
+
+    .splash-left {
+        position: absolute;
+        top: -300px;
+        left: -50px;
+        z-index: 1;
+
+        >img {
+            height: 60%;
+            width: 60%;
+        }
+    }
+
+    .splash-right {
+        position: absolute;
+        top: -350px;
+        right: -250px;
+        z-index: 1;
+
+        >img {
+            height: 60%;
+            width: 60%;
+        }
+    }
 }
