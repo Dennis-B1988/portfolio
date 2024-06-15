@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { MainComponent } from '../../main/main.component';
 
 @Component({
@@ -38,11 +38,9 @@ export class HeaderComponent implements OnInit {
     if(this.burgerMenuOpen) {
       this.burgerMenuOpen = false;
       document.body.style.overflow = 'unset';
-    console.log(this.burgerMenuOpen);
     } else {
       this.burgerMenuOpen = true;
       document.body.style.overflow = 'hidden';
-    console.log(this.burgerMenuOpen);
     }  
   }
 

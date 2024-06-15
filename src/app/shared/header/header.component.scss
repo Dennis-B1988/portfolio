@@ -46,6 +46,7 @@
 .header-language{
     display: flex;
     gap: 10px;
+    font-size: 16px;
 }
 
 .german,
@@ -54,8 +55,8 @@
 }
 
 .language-links-underline{
-    width: 25px;
-    border: 2px solid #FF4747;
+    width: 20px;
+    border: 1px solid #FF4747;
 }
 
 @media (max-width: 390px) {
@@ -133,7 +134,7 @@
 
     .mobile-language-links-underline{
         width: 22.5px;
-        border: 2px solid #FF4747;
+        border: 1px solid #FF4747;
     }
 }
 

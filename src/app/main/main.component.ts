@@ -29,26 +29,24 @@ import { SocialsComponent } from './socials-scroll/socials/socials.component';
   styleUrl: './main.component.scss'
 })
 
-export class MainComponent implements OnInit {
+export class MainComponent {
 
   currentRoute: string = '';
   isMenuOpen = false;
   
-  constructor(private router: Router, private app: AppComponent) {
-    this.router.events.subscribe(() => {
-      this.currentRoute = this.router.url;
-    });
+  constructor(private app: AppComponent) {
+    
   }
 
 
-  ngOnInit(): void {
-    this.currentRoute = this.router.url;
-  }
+  // ngOnInit(): void {
+  //   this.currentRoute = this.router.url;
+  // }
 
 
-  isActive(route: string): boolean {
-    return this.currentRoute.includes(route);
-  }
+  // isActive(route: string): boolean {
+  //   return this.currentRoute.includes(route);
+  // }
 
 
   scrollDown() {
@@ -58,10 +56,8 @@ export class MainComponent implements OnInit {
   toggleMobile() {
     if(this.isMenuOpen){
       this.isMenuOpen = false;
-      console.log(this.isMenuOpen);
     } else {
       this.isMenuOpen = true;
-      console.log(this.isMenuOpen);
     }
   }
 }
