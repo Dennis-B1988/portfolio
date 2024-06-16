@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { MainComponent } from '../../main/main.component';
 
 @Component({
@@ -44,13 +44,15 @@ export class HeaderComponent implements OnInit {
     }  
   }
 
+
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.checkWindowSize();
   }
 
+
   checkWindowSize() {
-    if (window.innerWidth > 390) {
+    if (window.innerWidth > 767) {
       this.burgerMenuOpen = false;
       this.main.isMenuOpen = false;
     }

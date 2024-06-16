@@ -59,7 +59,18 @@
     border: 1px solid #FF4747;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1200px) {
+    .header-right {
+        font-size: 18px;
+        gap: 20px;
+    }
+
+    .header-language {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
     .header-content {
         padding: 37px 25px 37px 25px;
     }

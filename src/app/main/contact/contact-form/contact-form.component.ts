@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -25,13 +26,6 @@ export class ContactFormComponent {
   }
 
 
-  putPlaceholderName() {
-    if (this.name === '') {
-      this.name = 'Your name';
-    }
-  }
-
-
   isValidName(): boolean {
     return this.name.length >= 2 && this.name !== 'Your name';
   }
@@ -40,13 +34,6 @@ export class ContactFormComponent {
   clearPlaceholderEmail() {
     if (this.email === 'Your email') {
       this.email = '';
-    }
-  }
-
-
-  putPlaceholderEmail() {
-    if (this.email === '') {
-      this.email = 'Your email';
     }
   }
 
@@ -60,13 +47,6 @@ export class ContactFormComponent {
   clearPlaceholderMessage() {
     if (this.message === 'Your message') {
       this.message = '';
-    }
-  }
-
-
-  putPlaceholderMessage() {
-    if (this.message === '') {
-      this.message = 'Your message';
     }
   }
 
@@ -96,5 +76,4 @@ export class ContactFormComponent {
       this.checkmark = false;
     }
   }
-
 }

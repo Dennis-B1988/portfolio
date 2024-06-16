@@ -7,7 +7,7 @@
         (focus)="clearPlaceholderName()"
         placeholder="Your name"
         [class.success-border]="isValidName()"
-        [class.error-border]="name.length < 2 && name !== 'Your name'"
+        [class.error-border]="name.length < 2"
         [ngModelOptions]="{ standalone: true }"
       />
       @if (isValidName()) {
@@ -29,7 +29,7 @@
         (focus)="clearPlaceholderEmail()"
         placeholder="Your email"
         [class.success-border]="isValidEmail(email)"
-        [class.error-border]="!isValidEmail(email) && email !== 'Your email'"
+        [class.error-border]="!isValidEmail(email)"
         [ngModelOptions]="{ standalone: true }"
       />
       @if (isValidEmail(email)) {
@@ -50,7 +50,7 @@
         (focus)="clearPlaceholderMessage()"
         placeholder="Your message"
         [class.success-border]="isValidMessage()"
-        [class.error-border]="!isValidMessage() && message !== 'Your message'"
+        [class.error-border]="!isValidMessage()"
         [ngModelOptions]="{ standalone: true }"
       ></textarea>
       @if (isValidMessage()) {
@@ -86,7 +86,9 @@
     }
     <span
       >I've read the
-      <span class="red-text">privacy policy</span>
+      <span class="red-text"
+        ><a routerLink="/privacy-policy">privacy policy</a></span
+      >
       and agree to the processing of my data as outlined.</span
     >
   </div>

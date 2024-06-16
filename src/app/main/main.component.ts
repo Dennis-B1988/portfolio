@@ -38,17 +38,6 @@ export class MainComponent {
     
   }
 
-
-  // ngOnInit(): void {
-  //   this.currentRoute = this.router.url;
-  // }
-
-
-  // isActive(route: string): boolean {
-  //   return this.currentRoute.includes(route);
-  // }
-
-
   scrollDown() {
     this.app.scrollToContacts();
   }

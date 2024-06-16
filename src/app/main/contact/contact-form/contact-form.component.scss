@@ -113,8 +113,12 @@
 }
 
 .red-text {
-    color: #FF4747;
     cursor: pointer;
+
+    >a{
+        text-decoration: unset;
+        color: #FF4747;
+    }
 
     &:hover {
         text-decoration: underline;
@@ -137,7 +141,7 @@
     transform-origin: top center;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 767px) {
     .contact-form {
         width: 100%;
         align-items: center;

@@ -2,7 +2,7 @@
   <div class="footer-left">
     <span>Dennis</span>
     <a
-      href=""
+      routerLink="/impressum"
       class="impressum"
       (mouseover)="mouseover = false"
       (mouseout)="mouseover = true"
@@ -28,11 +28,12 @@
   </div>
   <div class="footer-bottom-mobile">
     <a
-      href=""
+      routerLink="/impressum"
       class="impressum-mobile"
       (mouseover)="mouseover = false"
       (mouseout)="mouseover = true"
       >Impressum</a
     >
+    <div class="impressum-underline-mobile" [class.v-hidden]="mouseover"></div>
   </div>
 </div>

@@ -144,9 +144,21 @@
     color: #FA7902;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1279px) {
     .project-content {
-        height: 340px;
+        width: 60%;
+    }
+}
+
+@media (max-width: 910px) {
+    .project-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-content {
+        height: 550px;
         width: 90%;
     }
 
@@ -180,5 +192,26 @@
 
     .project-skills {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .project-content {
+        height: 340px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 370px) {
+    .project-text {
+        height: 55%;
+    }
+
+    .project-github{
+        padding: 15px 25px 15px 25px;
+    }
+
+    .project-live-test{
+        padding: 15px 25px 15px 25px;
     }
 }

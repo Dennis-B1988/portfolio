@@ -28,28 +28,28 @@ export class SkillsComponent {
       name: 'TypeScript'
     },
     {
+      image: './assets/img/Rest-Api.png',
+      name: 'Rest-Api'
+    },
+    {
       image: './assets/img/HTML.png',
       name: 'HTML'
-    },
-    {
-      image: './assets/img/GIT.png',
-      name: 'GIT'
-    },
-    {
-      image: './assets/img/Firebase.png',
-      name: 'Firebase'
     },
     {
       image: './assets/img/CSS.png',
       name: 'CSS'
     },
     {
-      image: './assets/img/Scrum.png',
-      name: 'Scrum'
+      image: './assets/img/Firebase.png',
+      name: 'Firebase'
     },
     {
-      image: './assets/img/Rest-Api.png',
-      name: 'Rest-Api'
+      image: './assets/img/GIT.png',
+      name: 'GIT'
+    },
+    {
+      image: './assets/img/Scrum.png',
+      name: 'Scrum'
     },
     {
       image: './assets/img/Material-design.png',

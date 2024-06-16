@@ -4,7 +4,6 @@
 }
 
 .portfolio-headline{
-    // width: 572px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -61,7 +60,16 @@
     left: -600px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 1279px) {
+    .portfolio-container-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
     .red-line{
         width: 3.5%;
     }
@@ -93,10 +101,6 @@
 
     .portfolio-container-content {
         margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .splash-right {
