@@ -1,7 +1,7 @@
 <div class="contact">
   <div class="contact-headline">
     <div class="invisible-line"></div>
-    <span class="title">Contact</span>
+    <span class="title">{{ "contact.title" | translate }}</span>
     <div class="orange-line"></div>
   </div>
 
@@ -9,18 +9,17 @@
     <div class="contact-content-left-side">
       <div class="line-and-text">
         <div class="purple-line"></div>
-        <span class="text">Got a problem to solve?</span>
+        <span class="text">{{ "contact.problem" | translate }}</span>
       </div>
       <div class="contact-content-left-side-bottom">
         <div class="empty-space"></div>
         <div class="sub-text">
-          <span class="my-work-text"
-            >Contact me through this form, I am interested in hearing from you,
-            knowing your ideas and contribution to your projects with my
-            work.</span
-          >
+          <span class="my-work-text">{{
+            "contact.contactText" | translate
+          }}</span>
           <span class="hire-me"
-            >Need a Frontend developer? <b>Contact me!</b></span
+            >{{ "contact.hireMe" | translate }}
+            <b>{{ "contact.contactMe" | translate }}</b></span
           >
         </div>
       </div>

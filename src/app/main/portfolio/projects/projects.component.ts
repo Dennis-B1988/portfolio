@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Portfolio } from '../../../interfaces/interfaces.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
@@ -40,15 +41,5 @@ export class ProjectsComponent {
       skills: 'JavaScript | HTML | CSS | Api',
       hover: false,
     },
-    // {
-    //   image: '',
-    //   image_hover: '',
-    //   name: 'Placeholder',
-    //   url: '',
-    //   github: '',
-    //   description: '',
-    //   skills: '',
-    //   hover: false,
-    // },
   ]
 }

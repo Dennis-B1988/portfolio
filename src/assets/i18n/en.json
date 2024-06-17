@@ -1,0 +1,61 @@
+{
+    "header": {
+        "about": "About me",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+    },
+
+    "main": {
+        "title": "I am",
+        "job": "FRONTEND DEVELOPER",
+        "button": "Let's talk!"
+    },
+
+    "socials": {
+        "scroll": "Scroll down"
+    },
+
+    "aboutMe": {
+        "title": "About me",
+        "description": "I am a Front-end developer based in Walldorf, Germany. I enjoy helping designers and companies bring their ideas into real life. I am looking forward to continuing my developer career with a job in a junior web developer position.",
+        "contactMe": "If you think I’d be a good match for your projects, contact me!",
+        "informationOne": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "informationTwo": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+    },
+
+    "skills": {
+        "text": "I have gained experience in building projects with various front end technologies and concepts.",
+        "button": "Get in touch"
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "This page is a sample of my work! scroll down to view other projects I have developed.",
+        "el_pollo_loco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "pokedex": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    },
+
+    "contact": {
+        "title": "Contact",
+        "problem": "Got a problem to solve?",
+        "contactText": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contribution to your projects with my work.",
+        "hireMe": "Need a Frontend developer? ",
+        "contactME": "Contact me!",
+        "formName": "Your name",
+        "formEmail": "Your email",
+        "formMessage": "Your message",
+        "nameRequired": "Your name is required",
+        "emailRequired": "Your email is required",
+        "messageRequired": "Your message is required",
+        "privacyPartOne": "I've read the ",
+        "privacy": "privacy policy ",
+        "privacyPartTwo": " and agree to the processing of my data as outlined.",
+        "button": "Send message"
+    },
+
+    "footer": {
+        "imprint": "Imprint"
+    }
+}

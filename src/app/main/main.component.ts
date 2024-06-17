@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from '../app.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { HeaderComponent } from '../shared/header/header.component';
@@ -9,7 +10,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ScrollDownComponent } from './socials-scroll/scroll-down/scroll-down.component';
 import { SocialsComponent } from './socials-scroll/socials/socials.component';
-
 
 @Component({
   selector: 'app-main',
@@ -23,7 +23,9 @@ import { SocialsComponent } from './socials-scroll/socials/socials.component';
     SkillsComponent, 
     PortfolioComponent, 
     ContactComponent,
-    AppComponent
+    AppComponent, 
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'

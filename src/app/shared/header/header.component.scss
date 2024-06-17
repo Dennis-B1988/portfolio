@@ -24,11 +24,17 @@
     line-height: 27.6px;
 }
 
+.header-links-underline-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
 .header-links{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     gap: 5px;
     >a{
         text-decoration: none;
@@ -51,7 +57,9 @@
 
 .german,
 .english {
-    cursor: pointer;
+    >span{
+        cursor: pointer;
+    }
 }
 
 .language-links-underline{

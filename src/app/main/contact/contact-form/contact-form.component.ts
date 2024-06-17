@@ -1,38 +1,75 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../../service/translation.service';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
 
-  name: string = 'Your name';
-  email: string = 'Your email';
-  message: string = 'Your message';
+  translate = inject(TranslationService);
+
+  name: string = 'Dein Name';
+  email: string = 'Deine Email';
+  message: string = 'Deine Nachricht';
   isFocused: boolean = false;
-
   checkmark: boolean = false;
+
+  yourName: string = '';
+  yourEmail: string = '';
+  yourMessage: string = '';
+
+  constructor(private translationService: TranslationService) {}
+
+
+  ngOnInit() {
+    this.translationService.currentLang$.subscribe(lang => {
+      this.changePlaceholder(lang);
+    });
+  }
+
+
+  changePlaceholder(lang: string) {
+    this.name = lang === 'de' ? 'Dein Name' : 'Your name';
+    this.email = lang === 'de' ? 'Deine Email' : 'Your email';
+    this.message = lang === 'de' ? 'Deine Nachricht' : 'Your message';
+  }
+
+
+  contactPlaceholderGerman(){
+    this.name = 'Dein Name';
+    this.email = 'Deine Email';
+    this.message = 'Deine Nachricht';
+  }
+
+
+  contactPlaceholderEnglish(){
+    this.name = 'Your name';
+    this.email = 'Your email';
+    this.message = 'Your message';
+  }
 
 
   clearPlaceholderName() {
-    if (this.name === 'Your name') {
-      this.name = '';
+    if (this.name === 'Your name' || this.name === 'Dein Name') {
+      this.name = ''; 
     }
   }
 
 
   isValidName(): boolean {
-    return this.name.length >= 2 && this.name !== 'Your name';
+    return this.name.length >= 2 && this.name !== 'Your name' && this.name !== 'Dein Name';
   }
 
 
   clearPlaceholderEmail() {
-    if (this.email === 'Your email') {
+    if (this.email === 'Your email' || this.email === 'Deine Email') {
       this.email = '';
     }
   }
@@ -45,14 +82,14 @@ export class ContactFormComponent {
 
 
   clearPlaceholderMessage() {
-    if (this.message === 'Your message') {
+    if (this.message === 'Your message' || this.message === 'Deine Nachricht') {
       this.message = '';
     }
   }
 
 
   isValidMessage(): boolean {
-    return this.message.length >= 5 && this.message !== 'Your message';
+    return this.message.length >= 5 && this.message !== 'Your message' && this.message !== 'Deine Nachricht';
   }
 
 
@@ -67,12 +104,11 @@ export class ContactFormComponent {
 
   messageSend() {
     if (this.checkmark == true && this.isValidName() && this.isValidEmail(this.email) && this.isValidMessage()) {
-      console.log(this.name);
-      console.log(this.email);
-      console.log(this.message);
-      this.name = 'Your name';
-      this.email = 'Your email';
-      this.message = 'Your message';
+      if(this.translate['translate'].currentLang == 'en'){
+        this.contactPlaceholderEnglish();
+      } else if(this.translate['translate'].currentLang == 'de'){
+        this.contactPlaceholderGerman();
+      }
       this.checkmark = false;
     }
   }

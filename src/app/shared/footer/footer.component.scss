@@ -18,6 +18,7 @@
     
     >a{
         text-decoration: none;
+        cursor: pointer;
     }
 }
 
@@ -74,7 +75,7 @@
     visibility: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
     .footer-content {
         height: 390px;
         width: 100%;
@@ -133,6 +134,7 @@
 
         >a{
             text-decoration: none;
+            cursor: pointer;
         }
     }
 

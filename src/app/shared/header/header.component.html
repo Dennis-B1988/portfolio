@@ -4,37 +4,55 @@
   </div>
   <div class="header-right">
     <div class="header-links">
-      <a href="#about-me"><span>About me</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#about-me')"
-      ></div>
+      <a href="#about-me"
+        ><span>{{ "header.about" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#about-me')"
+        ></div>
+      </div>
     </div>
     <div class="header-links">
-      <a href="#skills"><span>Skills</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#skills')"
-      ></div>
+      <a href="#skills"
+        ><span>{{ "header.skills" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#skills')"
+        ></div>
+      </div>
     </div>
     <div class="header-links">
-      <a href="#portfolio"><span>Portfolio</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#portfolio')"
-      ></div>
+      <a href="#portfolio"
+        ><span>{{ "header.portfolio" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#portfolio')"
+        ></div>
+      </div>
     </div>
     <div class="header-language">
       <div class="german">
-        <span>DE</span>
-        <div
-          class="language-links-underline"
-          [class.v-hidden]="!languageGerman"
-        ></div>
+        <span (click)="translate.switchLanguage('de')" (click)="checkLanguage()"
+          >DE</span
+        >
+        <div class="header-links-underline-container">
+          <div
+            class="language-links-underline"
+            [class.v-hidden]="!languageGerman"
+          ></div>
+        </div>
       </div>
       <span class="pipe">|</span>
       <div class="english">
-        <span>EN</span>
+        <span (click)="translate.switchLanguage('en')" (click)="checkLanguage()"
+          >EN</span
+        >
         <div
           class="language-links-underline"
           [class.v-hidden]="!languageEnglish"
@@ -69,37 +87,55 @@
 >
   <div class="mobile-menu-links">
     <div class="mobile-links">
-      <a href="#about-me" (click)="toggleMenu()"><span>About me</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#about-me')"
-      ></div>
+      <a href="#about-me" (click)="toggleMenu()"
+        ><span>{{ "header.about" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#about-me')"
+        ></div>
+      </div>
     </div>
     <div class="mobile-links">
-      <a href="#skills" (click)="toggleMenu()"><span>Skills</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#skills')"
-      ></div>
+      <a href="#skills" (click)="toggleMenu()"
+        ><span>{{ "header.skills" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#skills')"
+        ></div>
+      </div>
     </div>
     <div class="mobile-links">
-      <a href="#portfolio" (click)="toggleMenu()"><span>Portfolio</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#portfolio')"
-      ></div>
+      <a href="#portfolio" (click)="toggleMenu()"
+        ><span>{{ "header.portfolio" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#portfolio')"
+        ></div>
+      </div>
     </div>
     <div class="mobile-links">
-      <a href="#contacts" (click)="toggleMenu()"><span>Contacts</span></a>
-      <div
-        class="header-links-underline"
-        [class.v-hidden]="!isActive('#contacts')"
-      ></div>
+      <a href="#contacts" (click)="toggleMenu()"
+        ><span>{{ "header.contact" | translate }}</span></a
+      >
+      <div class="header-links-underline-container">
+        <div
+          class="header-links-underline"
+          [class.v-hidden]="!isActive('#contacts')"
+        ></div>
+      </div>
     </div>
 
     <div class="mobile-language">
       <div class="german">
-        <span>DE</span>
+        <span (click)="translate.switchLanguage('de')" (click)="checkLanguage()"
+          >DE</span
+        >
         <div
           class="mobile-language-links-underline"
           [class.v-hidden]="!languageGerman"
@@ -107,7 +143,9 @@
       </div>
       <span class="pipe">|</span>
       <div class="english">
-        <span>EN</span>
+        <span (click)="translate.switchLanguage('en')" (click)="checkLanguage()"
+          >EN</span
+        >
         <div
           class="mobile-language-links-underline"
           [class.v-hidden]="!languageEnglish"

@@ -27,23 +27,28 @@
     margin-top: 50px;
     position: relative;
     z-index: 5;
-
-    >img{
-        height: 200px;
-        width: 200px;
-    }
 }
 
 .information-first{
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    >img {
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .information-second{
     display: flex;
     justify-content: center;
     gap: 20px;
+
+    >img {
+        height: 50px;
+        width: 50px;
+    }
 }
 
 .splash-left{
@@ -66,21 +71,11 @@
     .information-first {
         align-items: center;
         gap: 34px;
-
-        >img {
-            height: 50px;
-            width: 50px;
-        }
     }
 
     .information-second {
         align-items: center;
         gap: 20px;
-
-        >img {
-            height: 50px;
-            width: 50px;
-        }
     }
 }
 

@@ -6,7 +6,7 @@
       class="impressum"
       (mouseover)="mouseover = false"
       (mouseout)="mouseover = true"
-      >Impressum</a
+      >{{ "footer.imprint" | translate }}</a
     >
     <div class="impressum-underline" [class.v-hidden]="mouseover"></div>
   </div>
@@ -32,7 +32,7 @@
       class="impressum-mobile"
       (mouseover)="mouseover = false"
       (mouseout)="mouseover = true"
-      >Impressum</a
+      >{{ "footer.imprint" | translate }}</a
     >
     <div class="impressum-underline-mobile" [class.v-hidden]="mouseover"></div>
   </div>

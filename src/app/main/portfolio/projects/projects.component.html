@@ -21,7 +21,19 @@
 
       <div class="project-text">
         <span class="project-name">{{ project.name }}</span>
-        <span class="project-description">{{ project.description }}</span>
+        @if (project.name == "El Pollo Loco") {
+          <span class="project-description">{{
+            "portfolio.el_pollo_loco" | translate
+          }}</span>
+        } @else if (project.name == "Join") {
+          <span class="project-description">{{
+            "portfolio.join" | translate
+          }}</span>
+        } @else if (project.name == "Pokédex") {
+          <span class="project-description">{{
+            "portfolio.pokedex" | translate
+          }}</span>
+        }
         <span class="project-skills">{{ project.skills }}</span>
       </div>
     </div>

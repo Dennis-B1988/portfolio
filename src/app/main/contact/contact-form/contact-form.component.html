@@ -5,7 +5,7 @@
         type="text"
         [(ngModel)]="name"
         (focus)="clearPlaceholderName()"
-        placeholder="Your name"
+        [placeholder]="name"
         [class.success-border]="isValidName()"
         [class.error-border]="name.length < 2"
         [ngModelOptions]="{ standalone: true }"
@@ -17,7 +17,7 @@
       }
     </div>
     @if (name.length < 2) {
-      <span class="required">Your name is required</span>
+      <span class="required">{{ "contact.nameRequired" | translate }}</span>
     }
   </div>
 
@@ -27,19 +27,25 @@
         type="email"
         [(ngModel)]="email"
         (focus)="clearPlaceholderEmail()"
-        placeholder="Your email"
+        [placeholder]="email"
         [class.success-border]="isValidEmail(email)"
         [class.error-border]="!isValidEmail(email)"
         [ngModelOptions]="{ standalone: true }"
       />
       @if (isValidEmail(email)) {
         <img src="./assets/img/success.png" alt="Success" />
-      } @else if (!isValidEmail(email) && email !== "Your email") {
+      } @else if (
+        !isValidEmail(email) &&
+        email !== "Your email" &&
+        email !== "Deine Email"
+      ) {
         <img src="./assets/img/error.png" alt="Error" />
       }
     </div>
-    @if (!isValidEmail(email) && email !== "Your email") {
-      <span class="required">Your email is required</span>
+    @if (
+      !isValidEmail(email) && email !== "Your email" && email !== "Deine Email"
+    ) {
+      <span class="required">{{ "contact.emailRequired" | translate }}</span>
     }
   </div>
 
@@ -48,19 +54,23 @@
       <textarea
         [(ngModel)]="message"
         (focus)="clearPlaceholderMessage()"
-        placeholder="Your message"
+        [placeholder]="message"
         [class.success-border]="isValidMessage()"
         [class.error-border]="!isValidMessage()"
         [ngModelOptions]="{ standalone: true }"
       ></textarea>
       @if (isValidMessage()) {
         <img src="./assets/img/success.png" alt="Success" />
-      } @else if (!isValidMessage() && message !== "Your message") {
+      } @else if (
+        !isValidMessage() &&
+        message !== "Your message" &&
+        message !== "Deine Nachricht"
+      ) {
         <img src="./assets/img/error.png" alt="Error" />
       }
     </div>
     @if (message.length < 2) {
-      <span class="required">Your message is empty</span>
+      <span class="required">{{ "contact.messageRequired" | translate }}</span>
     }
   </div>
 
@@ -85,11 +95,12 @@
       />
     }
     <span
-      >I've read the
+      >{{ "contact.privacyPartOne" | translate }}
       <span class="red-text"
-        ><a routerLink="/privacy-policy">privacy policy</a></span
-      >
-      and agree to the processing of my data as outlined.</span
+        ><a routerLink="/privacy-policy">{{
+          "contact.privacy" | translate
+        }}</a></span
+      >{{ "contact.privacyPartTwo" | translate }}</span
     >
   </div>
 </form>
@@ -108,7 +119,7 @@
       [style]="{ backgroundColor: '#B6B6B6;', cursor: 'not-allowed' }"
       disabled
     >
-      Send message
+      {{ "contact.button" | translate }}
     </button>
   } @else if (
     checkmark == true &&
@@ -125,7 +136,7 @@
       onmouseover="this.style.transform = 'scale(1.2)'"
       onmouseout="this.style.transform = 'scale(1.0)'"
     >
-      Send message
+      {{ "contact.button" | translate }}
     </button>
   }
 </div>

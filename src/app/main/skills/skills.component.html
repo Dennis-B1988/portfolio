@@ -13,20 +13,21 @@
   <div class="skills-right-side">
     <div class="skills-right-side-top">
       <div class="title">
-        <span>Skills</span>
+        <span>{{ "skills.title" | translate }}</span>
       </div>
       <div class="purple-line"></div>
     </div>
 
     <div class="skills-right-side-bottom">
-      <span
-        >I have gained experience in building projects with various front end
-        technologies and concepts.</span
-      >
+      <span>{{ "skills.description" | translate }}</span>
     </div>
 
-    <button (click)="scrollDown()" class="orange-btn">Get in touch</button>
+    <button (click)="scrollDown()" class="orange-btn">
+      {{ "skills.button" | translate }}
+    </button>
   </div>
 
-  <button (click)="scrollDown()" class="orange-btn-mobile">Get in touch</button>
+  <button (click)="scrollDown()" class="orange-btn-mobile">
+    {{ "skills.button" | translate }}
+  </button>
 </div>
