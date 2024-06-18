@@ -15,6 +15,12 @@
 .header-left {
     display: flex;
     gap: 32px;
+
+    >img {
+        height: 35px;
+
+        cursor: pointer;
+    }
 }
 
 .header-right {
@@ -127,6 +133,8 @@
     }
 
     .mobile-menu-links {
+        width: 105px;
+        margin-bottom: 80px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

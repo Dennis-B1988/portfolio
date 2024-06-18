@@ -29,7 +29,11 @@
         (focus)="clearPlaceholderEmail()"
         [placeholder]="email"
         [class.success-border]="isValidEmail(email)"
-        [class.error-border]="!isValidEmail(email)"
+        [class.error-border]="
+          !isValidEmail(email) &&
+          email !== 'Your email' &&
+          email !== 'Deine Email'
+        "
         [ngModelOptions]="{ standalone: true }"
       />
       @if (isValidEmail(email)) {
@@ -56,7 +60,11 @@
         (focus)="clearPlaceholderMessage()"
         [placeholder]="message"
         [class.success-border]="isValidMessage()"
-        [class.error-border]="!isValidMessage()"
+        [class.error-border]="
+          !isValidMessage() &&
+          message !== 'Your message' &&
+          message !== 'Deine Nachricht'
+        "
         [ngModelOptions]="{ standalone: true }"
       ></textarea>
       @if (isValidMessage()) {
@@ -97,7 +105,7 @@
     <span
       >{{ "contact.privacyPartOne" | translate }}
       <span class="red-text"
-        ><a routerLink="/privacy-policy">{{
+        ><a (click)="navigateToPrivacy()">{{
           "contact.privacy" | translate
         }}</a></span
       >{{ "contact.privacyPartTwo" | translate }}</span

@@ -9,7 +9,7 @@
     "main": {
         "title": "Ich bin",
         "job": "FRONTEND ENTWICKLER",
-        "button": ""
+        "button": "Lass uns reden!"
     },
 
     "socials": {
@@ -18,41 +18,42 @@
 
     "aboutMe": {
         "title": "Über mich",
-        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "description": "Ich bin ein Front-End-Entwickler mit Sitz in Walldorf, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden.",
+        "contactMe": "Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
         "informationOne": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
         "informationTwo": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
     },
 
     "skills": {
         "title": "Skills",
-        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-        "button": ""
+        "description": "Ich habe Erfahrung in der Erstellung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+        "button": "Kontaktaufnahme"
     },
 
     "portfolio": {
         "title": "Portfolio",
-        "description": "",
-        "el_pollo_loco": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-        "join": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-        "pokedex": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+        "description": "Diese Seite ist ein Beispiel für meine Arbeit! Scrollen Sie nach unten, um andere Projekte zu sehen, die ich entwickelt habe.",
+        "el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+        "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "pokedex": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert."
     },
 
     "contact": {
         "title": "Kontakt",
-        "problem": "Got a problem to solve?",
-        "contactText": "",
-        "hireMe": "Need a Frontend developer? ",
-        "contactME": "Contact me!",
+        "problem": "Haben Sie ein Problem zu lösen?",
+        "contactText": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+        "hireMe": "Brauchen Sie einen Frontend-Entwickler? ",
+        "contactMe": "Kontaktieren Sie mich!",
         "formName": "Dein Name",
         "formEmail": "Deine Email",
         "formMessage": "Deine Nachricht",
         "nameRequired": "Name erforderlich",
         "emailRequired": "Email erforderlich",
         "messageRequired": "Nachricht erforderlich",
-        "privacyPartOne": "",
-        "privacy": "",
-        "privacyPartTwo": "",
-        "button": ""
+        "privacyPartOne": "Ich habe die",
+        "privacy": "Datenschutzrichtlinien ",
+        "privacyPartTwo": "und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+        "button": "Nachricht senden"
     },
 
     "footer": {

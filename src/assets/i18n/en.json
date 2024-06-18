@@ -25,7 +25,8 @@
     },
 
     "skills": {
-        "text": "I have gained experience in building projects with various front end technologies and concepts.",
+        "title": "Skills",
+        "description": "I have gained experience in building projects with various front end technologies and concepts.",
         "button": "Get in touch"
     },
 
@@ -42,7 +43,7 @@
         "problem": "Got a problem to solve?",
         "contactText": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contribution to your projects with my work.",
         "hireMe": "Need a Frontend developer? ",
-        "contactME": "Contact me!",
+        "contactMe": "Contact me!",
         "formName": "Your name",
         "formEmail": "Your email",
         "formMessage": "Your message",

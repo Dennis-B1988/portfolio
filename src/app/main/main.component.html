@@ -5,11 +5,15 @@
     <div class="main-content">
       <div class="title">
         <div class="title-left-rotate">
-          <span>{{ "main.title" | translate }}</span>
+          @if (languages.languageGerman) {
+            <span class="title-german">Ich bin</span>
+          } @else {
+            <span class="title-english">I am</span>
+          }
         </div>
         <div class="title-right">
           <h1>Dennis Baust</h1>
-          <span class="title-red-font">{{ "main.job" | translate }}</span>
+          <span class="title-red-font">FRONTEND DEVELOPER</span>
         </div>
       </div>
 

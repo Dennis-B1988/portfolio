@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from '../app.component';
+import { CheckLanguageService } from '../service/check-language/check-language.service';
+import { TranslationService } from '../service/translation.service';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { HeaderComponent } from '../shared/header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -35,14 +37,18 @@ export class MainComponent {
 
   currentRoute: string = '';
   isMenuOpen = false;
+
+  translate = inject(TranslationService);
+  languages = inject(CheckLanguageService);
+
   
-  constructor(private app: AppComponent) {
-    
-  }
+  constructor(private app: AppComponent) {}
+
 
   scrollDown() {
     this.app.scrollToContacts();
   }
+
 
   toggleMobile() {
     if(this.isMenuOpen){

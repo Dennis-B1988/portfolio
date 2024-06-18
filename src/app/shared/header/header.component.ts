@@ -2,21 +2,23 @@ import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { MainComponent } from '../../main/main.component';
+import { CheckLanguageService } from '../../service/check-language/check-language.service';
 import { TranslationService } from '../../service/translation.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule], // Import ContactFormComponent
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   currentRoute: string = '';
   burgerMenuOpen = false;
-  languageGerman = true;
-  languageEnglish = false;
+  
   translate = inject(TranslationService);
+
+  languages = inject(CheckLanguageService);
 
 
   constructor(private router: Router, private main: MainComponent) {
@@ -64,8 +66,8 @@ export class HeaderComponent implements OnInit {
 
   checkLanguage() {
     const lang = this.translate.currentLang;
-    this.languageGerman = lang === 'de';
-    this.languageEnglish = lang === 'en';
+    this.languages.languageGerman = lang === 'de';
+    this.languages.languageEnglish = lang === 'en';
     this.translate.switchLanguage(lang);
   }
 }

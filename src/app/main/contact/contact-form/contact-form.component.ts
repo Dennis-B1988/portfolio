@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../../service/translation.service';
 
@@ -21,11 +21,8 @@ export class ContactFormComponent implements OnInit {
   isFocused: boolean = false;
   checkmark: boolean = false;
 
-  yourName: string = '';
-  yourEmail: string = '';
-  yourMessage: string = '';
 
-  constructor(private translationService: TranslationService) {}
+  constructor(private translationService: TranslationService, private router: Router) {}
 
 
   ngOnInit() {
@@ -111,5 +108,10 @@ export class ContactFormComponent implements OnInit {
       }
       this.checkmark = false;
     }
+  }
+
+
+  navigateToPrivacy() {
+    this.router.navigate(['/privacy-policy']);
   }
 }

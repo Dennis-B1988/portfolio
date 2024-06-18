@@ -1,6 +1,6 @@
 <div class="header-content">
   <div class="header-left">
-    <span>Dennis</span>
+    <img src="./assets/img/logo.png" alt="logo" />
   </div>
   <div class="header-right">
     <div class="header-links">
@@ -44,7 +44,7 @@
         <div class="header-links-underline-container">
           <div
             class="language-links-underline"
-            [class.v-hidden]="!languageGerman"
+            [class.v-hidden]="!languages.languageGerman"
           ></div>
         </div>
       </div>
@@ -55,7 +55,7 @@
         >
         <div
           class="language-links-underline"
-          [class.v-hidden]="!languageEnglish"
+          [class.v-hidden]="!languages.languageEnglish"
         ></div>
       </div>
     </div>
@@ -138,7 +138,7 @@
         >
         <div
           class="mobile-language-links-underline"
-          [class.v-hidden]="!languageGerman"
+          [class.v-hidden]="!languages.languageGerman"
         ></div>
       </div>
       <span class="pipe">|</span>
@@ -148,7 +148,7 @@
         >
         <div
           class="mobile-language-links-underline"
-          [class.v-hidden]="!languageEnglish"
+          [class.v-hidden]="!languages.languageEnglish"
         ></div>
       </div>
     </div>

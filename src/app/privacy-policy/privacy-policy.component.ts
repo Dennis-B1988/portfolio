@@ -5,7 +5,7 @@ import { HeaderComponent } from '../shared/header/header.component';
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })

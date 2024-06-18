@@ -69,6 +69,12 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .splash-right {
+        top: 100px;
+    }
+}
+
 @media (max-width: 767px) {
     .red-line{
         width: 3.5%;
