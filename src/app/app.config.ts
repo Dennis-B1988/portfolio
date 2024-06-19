@@ -4,6 +4,7 @@ import { provideRouter } from '@angular/router';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from './app.routes';
+import { MainComponent } from './main/main.component';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -11,16 +12,17 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),
-
-  provideHttpClient(),
-  TranslateService,
-  TranslateModule.forRoot({
-    defaultLanguage: 'en',
-    loader: {
-      provide: TranslateLoader,
-      useFactory: HttpLoaderFactory,
-      deps: [HttpClient]
-    }
+  providers: [
+    provideRouter(routes),
+    MainComponent,
+    provideHttpClient(),
+    TranslateService,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
   }).providers!],
 };

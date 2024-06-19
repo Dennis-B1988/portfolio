@@ -16,10 +16,14 @@
     display: flex;
     gap: 32px;
 
-    >img {
+    >a{
+        text-decoration: none;
         height: 35px;
 
-        cursor: pointer;
+        >img {
+            height: 35px;
+            cursor: pointer;
+            }
     }
 }
 

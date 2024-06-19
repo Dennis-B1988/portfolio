@@ -1,82 +1,90 @@
 <div class="header-content">
   <div class="header-left">
-    <img src="./assets/img/logo.png" alt="logo" />
+    <a routerLink="/"><img src="./assets/img/logo.png" alt="logo" /></a>
   </div>
   <div class="header-right">
-    <div class="header-links">
-      <a href="#about-me"
-        ><span>{{ "header.about" | translate }}</span></a
-      >
-      <div class="header-links-underline-container">
-        <div
-          class="header-links-underline"
-          [class.v-hidden]="!isActive('#about-me')"
-        ></div>
-      </div>
-    </div>
-    <div class="header-links">
-      <a href="#skills"
-        ><span>{{ "header.skills" | translate }}</span></a
-      >
-      <div class="header-links-underline-container">
-        <div
-          class="header-links-underline"
-          [class.v-hidden]="!isActive('#skills')"
-        ></div>
-      </div>
-    </div>
-    <div class="header-links">
-      <a href="#portfolio"
-        ><span>{{ "header.portfolio" | translate }}</span></a
-      >
-      <div class="header-links-underline-container">
-        <div
-          class="header-links-underline"
-          [class.v-hidden]="!isActive('#portfolio')"
-        ></div>
-      </div>
-    </div>
-    <div class="header-language">
-      <div class="german">
-        <span (click)="translate.switchLanguage('de')" (click)="checkLanguage()"
-          >DE</span
+    @if (
+      this.router.url !== "/imprint" && this.router.url !== "/privacy-policy"
+    ) {
+      <div class="header-links">
+        <a href="#about-me"
+          ><span>{{ "header.about" | translate }}</span></a
         >
         <div class="header-links-underline-container">
           <div
-            class="language-links-underline"
-            [class.v-hidden]="!languages.languageGerman"
+            class="header-links-underline"
+            [class.v-hidden]="!isActive('#about-me')"
           ></div>
         </div>
       </div>
-      <span class="pipe">|</span>
-      <div class="english">
-        <span (click)="translate.switchLanguage('en')" (click)="checkLanguage()"
-          >EN</span
+      <div class="header-links">
+        <a href="#skills"
+          ><span>{{ "header.skills" | translate }}</span></a
         >
-        <div
-          class="language-links-underline"
-          [class.v-hidden]="!languages.languageEnglish"
-        ></div>
+        <div class="header-links-underline-container">
+          <div
+            class="header-links-underline"
+            [class.v-hidden]="!isActive('#skills')"
+          ></div>
+        </div>
       </div>
-    </div>
+      <div class="header-links">
+        <a href="#portfolio"
+          ><span>{{ "header.portfolio" | translate }}</span></a
+        >
+        <div class="header-links-underline-container">
+          <div
+            class="header-links-underline"
+            [class.v-hidden]="!isActive('#portfolio')"
+          ></div>
+        </div>
+      </div>
+      <div class="header-language">
+        <div class="german">
+          <span
+            (click)="translate.switchLanguage('de')"
+            (click)="checkLanguage()"
+            >DE</span
+          >
+          <div class="header-links-underline-container">
+            <div
+              class="language-links-underline"
+              [class.v-hidden]="!languages.languageGerman"
+            ></div>
+          </div>
+        </div>
+        <span class="pipe">|</span>
+        <div class="english">
+          <span
+            (click)="translate.switchLanguage('en')"
+            (click)="checkLanguage()"
+            >EN</span
+          >
+          <div
+            class="language-links-underline"
+            [class.v-hidden]="!languages.languageEnglish"
+          ></div>
+        </div>
+      </div>
 
-    <div
-      class="burger-menu"
-      (click)="toggleMenu()"
-      [class.d-none]="burgerMenuOpen"
-    >
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
+      <div
+        class="burger-menu"
+        (click)="toggleMenu()"
+        [class.d-none]="burgerMenuOpen"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
 
-    <div
-      class="close-mobile-menu"
-      (click)="toggleMenu()"
-      [class.d-none]="!burgerMenuOpen"
-    >
-      <img src="./assets/img/Close.png" alt="" />
-    </div>
+      <div
+        class="close-mobile-menu"
+        (click)="toggleMenu()"
+        [class.d-none]="!burgerMenuOpen"
+      >
+        <img src="./assets/img/Close.png" alt="" />
+      </div>
+    }
   </div>
 </div>
 

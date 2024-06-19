@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { MainComponent } from '../../main/main.component';
 import { CheckLanguageService } from '../../service/check-language/check-language.service';
@@ -8,7 +8,7 @@ import { TranslationService } from '../../service/translation.service';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   languages = inject(CheckLanguageService);
 
 
-  constructor(private router: Router, private main: MainComponent) {
+  constructor(public router: Router, private main: MainComponent) {
     this.router.events.subscribe(() => {
       this.currentRoute = this.router.url;
     });

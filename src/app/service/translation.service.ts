@@ -6,20 +6,27 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class TranslationService {
-  private _currentLang = new BehaviorSubject<string>('de');
-  currentLang$ = this._currentLang.asObservable();
+  private currentLangSubject = new BehaviorSubject<string>('en');
+  currentLang$ = this.currentLangSubject.asObservable();
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('de');
+
+  get currentLang(): string {
+    return this.currentLangSubject.getValue();
   }
 
-  switchLanguage(language: string): void {
-    this.translate.use(language);
-    this._currentLang.next(language);
+
+  setLanguage(lang: string) {
+    this.currentLangSubject.next(lang);
   }
 
-  get currentLang() {
-    return this._currentLang.value;
+
+  switchLanguage(lang: string) {
+    this.setLanguage(lang);
+  }
+  
+
+  getCurrentLanguage(): string {
+    return this.currentLangSubject.getValue();
   }
 }
 

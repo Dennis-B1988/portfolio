@@ -1,22 +1,39 @@
-<form action="" class="contact-form" id="contactMe">
+<form
+  (ngSubmit)="onSubmit(contactForm)"
+  #contactForm="ngForm"
+  class="contact-form"
+  id="contactMe"
+>
   <div class="input-and-message">
     <div class="input-container">
       <input
         type="text"
-        [(ngModel)]="name"
+        [(ngModel)]="contactData.name"
         (focus)="clearPlaceholderName()"
-        [placeholder]="name"
+        [placeholder]="placeholderName"
         [class.success-border]="isValidName()"
-        [class.error-border]="name.length < 2"
+        [class.error-border]="
+          contactData.name.length < 2 &&
+          placeholderName !== 'Your name' &&
+          placeholderName !== 'Dein Name'
+        "
         [ngModelOptions]="{ standalone: true }"
       />
       @if (isValidName()) {
         <img src="./assets/img/success.png" alt="Success" />
-      } @else if (name.length < 2) {
+      } @else if (
+        contactData.name.length < 2 &&
+        placeholderName !== "Your name" &&
+        placeholderName !== "Dein Name"
+      ) {
         <img src="./assets/img/error.png" alt="Error" />
       }
     </div>
-    @if (name.length < 2) {
+    @if (
+      contactData.name.length < 2 &&
+      placeholderName !== "Your name" &&
+      placeholderName !== "Dein Name"
+    ) {
       <span class="required">{{ "contact.nameRequired" | translate }}</span>
     }
   </div>
@@ -25,29 +42,31 @@
     <div class="input-container">
       <input
         type="email"
-        [(ngModel)]="email"
+        [(ngModel)]="contactData.email"
         (focus)="clearPlaceholderEmail()"
-        [placeholder]="email"
-        [class.success-border]="isValidEmail(email)"
+        [placeholder]="placeholderEmail"
+        [class.success-border]="isValidEmail(contactData.email)"
         [class.error-border]="
-          !isValidEmail(email) &&
-          email !== 'Your email' &&
-          email !== 'Deine Email'
+          !isValidEmail(contactData.email) &&
+          placeholderEmail !== 'Your email' &&
+          placeholderEmail !== 'Deine Email'
         "
         [ngModelOptions]="{ standalone: true }"
       />
-      @if (isValidEmail(email)) {
+      @if (isValidEmail(contactData.email)) {
         <img src="./assets/img/success.png" alt="Success" />
       } @else if (
-        !isValidEmail(email) &&
-        email !== "Your email" &&
-        email !== "Deine Email"
+        !isValidEmail(contactData.email) &&
+        placeholderEmail !== "Your email" &&
+        placeholderEmail !== "Deine Email"
       ) {
         <img src="./assets/img/error.png" alt="Error" />
       }
     </div>
     @if (
-      !isValidEmail(email) && email !== "Your email" && email !== "Deine Email"
+      !isValidEmail(contactData.email) &&
+      placeholderEmail !== "Your email" &&
+      placeholderEmail !== "Deine Email"
     ) {
       <span class="required">{{ "contact.emailRequired" | translate }}</span>
     }
@@ -56,14 +75,14 @@
   <div class="input-and-message">
     <div class="textarea-container">
       <textarea
-        [(ngModel)]="message"
+        [(ngModel)]="contactData.message"
         (focus)="clearPlaceholderMessage()"
-        [placeholder]="message"
+        [placeholder]="placeholderMessage"
         [class.success-border]="isValidMessage()"
         [class.error-border]="
           !isValidMessage() &&
-          message !== 'Your message' &&
-          message !== 'Deine Nachricht'
+          placeholderMessage !== 'Your message' &&
+          placeholderMessage !== 'Deine Nachricht'
         "
         [ngModelOptions]="{ standalone: true }"
       ></textarea>
@@ -71,13 +90,17 @@
         <img src="./assets/img/success.png" alt="Success" />
       } @else if (
         !isValidMessage() &&
-        message !== "Your message" &&
-        message !== "Deine Nachricht"
+        placeholderMessage !== "Your message" &&
+        placeholderMessage !== "Deine Nachricht"
       ) {
         <img src="./assets/img/error.png" alt="Error" />
       }
     </div>
-    @if (message.length < 2) {
+    @if (
+      contactData.message.length < 2 &&
+      placeholderMessage !== "Your message" &&
+      placeholderMessage !== "Deine Nachricht"
+    ) {
       <span class="required">{{ "contact.messageRequired" | translate }}</span>
     }
   </div>
@@ -105,46 +128,45 @@
     <span
       >{{ "contact.privacyPartOne" | translate }}
       <span class="red-text"
-        ><a (click)="navigateToPrivacy()">{{
+        ><a routerLink="/privacy-policy">{{
           "contact.privacy" | translate
         }}</a></span
       >{{ "contact.privacyPartTwo" | translate }}</span
     >
   </div>
-</form>
 
-<div class="contact-btn-container">
-  @if (
-    checkmark == false ||
-    !isValidName() ||
-    !isValidEmail(email) ||
-    !isValidMessage()
-  ) {
-    <button
-      class="send-contact-btn"
-      id="sendContact"
-      form="contactMe"
-      [style]="{ backgroundColor: '#B6B6B6;', cursor: 'not-allowed' }"
-      disabled
-    >
-      {{ "contact.button" | translate }}
-    </button>
-  } @else if (
-    checkmark == true &&
-    isValidName() &&
-    isValidEmail(email) &&
-    isValidMessage()
-  ) {
-    <button
-      class="send-contact-btn"
-      id="sendContact"
-      form="contactMe"
-      (click)="messageSend()"
-      [style]="{ backgroundColor: '#E86F00' }"
-      onmouseover="this.style.transform = 'scale(1.2)'"
-      onmouseout="this.style.transform = 'scale(1.0)'"
-    >
-      {{ "contact.button" | translate }}
-    </button>
-  }
-</div>
+  <div class="contact-btn-container">
+    @if (
+      checkmark == false ||
+      !isValidName() ||
+      !isValidEmail(contactData.email) ||
+      !isValidMessage()
+    ) {
+      <button
+        class="send-contact-btn"
+        id="sendContact"
+        [style]="{ backgroundColor: '#B6B6B6;', cursor: 'not-allowed' }"
+        disabled
+      >
+        {{ "contact.button" | translate }}
+      </button>
+    } @else if (
+      checkmark == true &&
+      isValidName() &&
+      isValidEmail(contactData.email) &&
+      isValidMessage()
+    ) {
+      <button
+        class="send-contact-btn"
+        id="sendContact"
+        type="submit"
+        (click)="onExternalSubmit(contactForm)"
+        [style]="{ backgroundColor: '#E86F00' }"
+        onmouseover="this.style.transform = 'scale(1.2)'"
+        onmouseout="this.style.transform = 'scale(1.0)'"
+      >
+        {{ "contact.button" | translate }}
+      </button>
+    }
+  </div>
+</form>

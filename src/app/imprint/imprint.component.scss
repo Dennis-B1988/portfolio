@@ -1,4 +1,31 @@
-.imprint-content{
-    height: 100vh;
+.imprint-main {
+    min-height: 100vh;
     background-color: #141D2F;
+}
+
+.imprint-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imprint-content {
+    width: 85%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1 {
+    padding: 20px 0 20px 0;
+}
+
+h2 {
+    padding: 20px 0 20px 0;
+}
+
+p {
+    padding: 10px 0 10px 0;
 }
