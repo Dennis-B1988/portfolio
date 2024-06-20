@@ -38,5 +38,13 @@
         </a>
       </div>
     </div>
+    <div
+      class="contact-send-success"
+      [@sendSuccessAnimation]="
+        this.sendMessage.sendSuccessVisible ? 'visible' : 'hidden'
+      "
+    >
+      {{ "contact.send" | translate }}
+    </div>
   </div>
 </div>

@@ -53,7 +53,8 @@
         "privacyPartOne": "Ich habe die",
         "privacy": "Datenschutzrichtlinien ",
         "privacyPartTwo": "und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
-        "button": "Nachricht senden"
+        "button": "Nachricht senden",
+        "send": "Nachricht gesendet!"
     },
 
     "footer": {

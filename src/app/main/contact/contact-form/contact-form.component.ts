@@ -3,7 +3,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { SendMessageService } from '../../../service/send-message/send-message.service';
 import { TranslationService } from '../../../service/translation.service';
+import { ContactComponent } from '../contact.component';
 
 @Component({
   selector: 'app-contact-form',
@@ -16,6 +18,7 @@ export class ContactFormComponent implements OnInit {
 
   translate = inject(TranslationService);
   http = inject(HttpClient);
+  contact = inject(ContactComponent);
 
   placeholderName: string = 'Dein Name';
   placeholderEmail: string = 'Deine Email';
@@ -29,10 +32,10 @@ export class ContactFormComponent implements OnInit {
     message: ''
   };
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://dennis-baust.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -58,17 +61,14 @@ export class ContactFormComponent implements OnInit {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
-          console.log(response);
         },
         error: (error) => {
           console.error(error);
         },
         complete: () => console.info('send post complete'),
       });
-      console.log(this.contactData);
       this.resetForm(ngForm);
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log(this.contactData);
       this.resetForm(ngForm);
     }
   }
@@ -84,6 +84,19 @@ export class ContactFormComponent implements OnInit {
     this.changePlaceholder(this.translationService.getCurrentLanguage());
     this.contactData = { name: '', email: '', message: '' };
     this.checkmark = false;
+  }
+
+
+  onMouseOver(img: HTMLImageElement) {
+    img.src = this.checkmark
+      ? './assets/img/checkbox-checked-hover.png'
+      : './assets/img/checkbox-unchecked-hover.png';
+  }
+
+  onMouseOut(img: HTMLImageElement) {
+    img.src = this.checkmark
+      ? './assets/img/checkbox-checked.png'
+      : './assets/img/checkbox-unchecked.png';
   }
 
 

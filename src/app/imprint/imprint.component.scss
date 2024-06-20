@@ -10,9 +10,12 @@
 }
 
 .imprint-content {
-    width: 85%;
+    width: 100%;
+    max-width: 1440px;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -28,4 +31,21 @@ h2 {
 
 p {
     padding: 10px 0 10px 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .imprint-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }

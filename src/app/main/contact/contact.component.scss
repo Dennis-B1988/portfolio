@@ -90,6 +90,7 @@
 .contact-content-right-side{
     width: 43%;
     margin-right: 90px;
+    position: relative;
 }
 
 .back-to-top{
@@ -97,6 +98,16 @@
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
+}
+
+.contact-send-success{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background-color: #70E61C;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
 }
 
 @media (max-width: 910px) {

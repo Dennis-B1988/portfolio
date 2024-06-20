@@ -7,12 +7,16 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .privacy-content{
-    width: 85%;
+    width: 100%;
+    max-width: 1440px;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -30,12 +34,25 @@ p{
     padding: 10px 0 10px 0;
 }
 
-@media (max-width: 550px) {
-    .privacy-content {
-        font-size: 80%;
+.header {
+    display: flex;
+    justify-content: center;
+}
 
-        .bfdi{
-            font-size: 10px;
-        }
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .privacy-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .privacy-content {
+        font-size: 90%;
     }
 }

@@ -106,29 +106,23 @@
   </div>
 
   <div class="privacy-check">
-    @if (checkmark == false) {
-      <img
-        src="./assets/img/checkbox-unchecked.png"
-        alt=""
-        class="checkmark"
-        (click)="toggleCheckmark()"
-        onmouseover="this.src='./assets/img/checkbox-unchecked-hover.png'"
-        onmouseout="this.src='./assets/img/checkbox-unchecked.png'"
-      />
-    } @else if (checkmark == true) {
-      <img
-        src="./assets/img/checkbox-checked.png"
-        alt=""
-        class="checkmark"
-        (click)="toggleCheckmark()"
-        onmouseover="this.src='./assets/img/checkbox-checked-hover.png'"
-        onmouseout="this.src='./assets/img/checkbox-checked.png'"
-      />
-    }
+    <img
+      #checkmarkImg
+      [src]="
+        checkmark
+          ? './assets/img/checkbox-checked.png'
+          : './assets/img/checkbox-unchecked.png'
+      "
+      alt="checkmark"
+      class="checkmark"
+      (click)="toggleCheckmark()"
+      (mouseover)="onMouseOver(checkmarkImg)"
+      (mouseout)="onMouseOut(checkmarkImg)"
+    />
     <span
       >{{ "contact.privacyPartOne" | translate }}
       <span class="red-text"
-        ><a routerLink="/privacy-policy">{{
+        ><a routerLink="/privacy-policy" href="#header">{{
           "contact.privacy" | translate
         }}</a></span
       >{{ "contact.privacyPartTwo" | translate }}</span
@@ -161,6 +155,7 @@
         id="sendContact"
         type="submit"
         (click)="onExternalSubmit(contactForm)"
+        (click)="this.contact.showSendSuccess()"
         [style]="{ backgroundColor: '#E86F00' }"
         onmouseover="this.style.transform = 'scale(1.2)'"
         onmouseout="this.style.transform = 'scale(1.0)'"
