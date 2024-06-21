@@ -25,7 +25,7 @@
         >img {
             height: 35px;
             cursor: pointer;
-            }
+        }
     }
 }
 
@@ -171,6 +171,18 @@
     }
 }
 
+@media (hover: none) and (pointer: coarse) {
+    .header-links {
+    
+        >a {
+
+            >:hover {
+                color: inherit;
+            }
+        }
+    }
+}
+
 .v-hidden {
     visibility: hidden;
 }
@@ -187,4 +199,3 @@
     bottom: 0;
     z-index: 10;
 }
-

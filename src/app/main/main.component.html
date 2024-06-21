@@ -1,8 +1,16 @@
-<section id="content" class="content">
+<div id="content" class="content">
   <app-header class="header"></app-header>
 
   <div class="main">
-    <div class="main-content">
+    <div class="background-colors">
+      <img class="red-top-left" src="./assets/img/red-top-left.svg" alt="" />
+      <img
+        class="magenta-top-right"
+        src="./assets/img/magenta-top-right.svg"
+        alt=""
+      />
+    </div>
+    <div class="main-content" id="main-content">
       <div class="title">
         <div class="title-left-rotate">
           @if (languages.languageGerman) {
@@ -31,20 +39,13 @@
       </div>
     </div>
 
-    <div class="splash-top-left">
-      <img src="./assets/img/red-top-left.svg" alt="" />
-    </div>
-    <div class="splash-top-right">
-      <img src="./assets/img/magenta-top-right.svg" alt="" />
-    </div>
+    <app-about-me class="about-me" id="about-me"></app-about-me>
 
-    <app-about-me id="about-me"></app-about-me>
+    <app-skills class="skills" id="skills"></app-skills>
 
-    <app-skills></app-skills>
+    <app-portfolio class="portfolio" id="portfolio"></app-portfolio>
 
-    <app-portfolio></app-portfolio>
-
-    <app-contact id="contacts"></app-contact>
+    <app-contact class="contacts" id="contacts"></app-contact>
     <app-footer class="footer"></app-footer>
   </div>
-</section>
+</div>

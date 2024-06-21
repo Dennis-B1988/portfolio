@@ -35,6 +35,11 @@ export class ContactComponent {
   sendMessage = inject(SendMessageService);
 
 
+/**
+ * Shows the send success message and hides it after a delay of 2000 milliseconds.
+ *
+ * @return {void} This function does not return a value.
+ */
   showSendSuccess() {
     this.sendMessage.sendSuccessVisible = true;
     setTimeout(() => {

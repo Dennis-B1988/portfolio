@@ -57,7 +57,12 @@ export class SkillsComponent {
       name: 'Material design'
     }
   ]
+  
 
+  /**
+   * Scrolls down to the contacts section.
+   *
+   */
   scrollDown() {
     this.app.scrollToContacts();
   }

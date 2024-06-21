@@ -1,10 +1,9 @@
-.about-me-content{
+.about-me{
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    margin-top: 104px;
     margin-left: 100px;
     position: relative;  
 }
@@ -84,13 +83,12 @@
         width: 100%;
         display: block;
         position: absolute;
-        top: 900px;
+        top: -130px;
         z-index: 4;
     }
 
-    .about-me-content{
+    .about-me{
         width: 80%;
-        margin-top: 300px;
         margin-left: auto;
         margin-right: auto;
         gap: 0;
@@ -131,7 +129,7 @@
 
     .splash-left {
         position: absolute;
-        top: 100px;
+        top: 320px;
         left: -200px;
         z-index: 1;
 
@@ -143,7 +141,7 @@
 
     .splash-right {
         position: absolute;
-        top: 100px;
+        top: 200px;
         right: -400px;
         z-index: 1;
 
@@ -151,5 +149,15 @@
             height: 60%;
             width: 60%;
         }
+    }
+}
+
+@media (max-height: 1000px) {
+    .about-me {
+        margin-top: 50px;
+    }
+
+    .transition {
+        top: -70px;
     }
 }

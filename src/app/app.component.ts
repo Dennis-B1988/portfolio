@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { SmoothScrollService } from './service/smooth-scroll/smooth-scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,26 @@ import { MainComponent } from './main/main.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private router: Router, private smoothScrollService: SmoothScrollService) {}
+  
   title = 'portfolio';
 
+
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.smoothScrollService.smoothScrollTo(0, 0);
+      }
+    });
+  }
+
+  
+/**
+ * Scrolls the page to the element with the ID 'contacts' if it exists.
+ *
+ * @return {void} This function does not return a value.
+ */
   scrollToContacts() {
     const element = document.getElementById('contacts');
     if (element) {

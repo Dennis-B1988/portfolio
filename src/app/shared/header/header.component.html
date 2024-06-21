@@ -7,7 +7,7 @@
       this.router.url !== "/imprint" && this.router.url !== "/privacy-policy"
     ) {
       <div class="header-links">
-        <a href="#about-me"
+        <a href="#about-me" (click)="scrollToSection($event, 'about-me')"
           ><span>{{ "header.about" | translate }}</span></a
         >
         <div class="header-links-underline-container">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="header-links">
-        <a href="#skills"
+        <a href="#skills" (click)="scrollToSection($event, 'skills')"
           ><span>{{ "header.skills" | translate }}</span></a
         >
         <div class="header-links-underline-container">
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="header-links">
-        <a href="#portfolio"
+        <a href="#portfolio" (click)="scrollToSection($event, 'portfolio')"
           ><span>{{ "header.portfolio" | translate }}</span></a
         >
         <div class="header-links-underline-container">
@@ -95,7 +95,9 @@
 >
   <div class="mobile-menu-links">
     <div class="mobile-links">
-      <a href="#about-me" (click)="toggleMenu()"
+      <a
+        href="#about-me"
+        (click)="scrollToSection($event, 'about-me'); toggleMenu()"
         ><span>{{ "header.about" | translate }}</span></a
       >
       <div class="header-links-underline-container">
@@ -106,7 +108,9 @@
       </div>
     </div>
     <div class="mobile-links">
-      <a href="#skills" (click)="toggleMenu()"
+      <a
+        href="#skills"
+        (click)="scrollToSection($event, 'skills'); toggleMenu()"
         ><span>{{ "header.skills" | translate }}</span></a
       >
       <div class="header-links-underline-container">
@@ -117,7 +121,9 @@
       </div>
     </div>
     <div class="mobile-links">
-      <a href="#portfolio" (click)="toggleMenu()"
+      <a
+        href="#portfolio"
+        (click)="scrollToSection($event, 'portfolio'); toggleMenu()"
         ><span>{{ "header.portfolio" | translate }}</span></a
       >
       <div class="header-links-underline-container">
@@ -128,7 +134,9 @@
       </div>
     </div>
     <div class="mobile-links">
-      <a href="#contacts" (click)="toggleMenu()"
+      <a
+        href="#contacts"
+        (click)="scrollToSection($event, 'contacts'); toggleMenu()"
         ><span>{{ "header.contact" | translate }}</span></a
       >
       <div class="header-links-underline-container">

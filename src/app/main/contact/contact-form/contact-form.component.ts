@@ -49,6 +49,12 @@ export class ContactFormComponent implements OnInit {
   constructor(private translationService: TranslationService, private router: Router) {}
 
 
+  /**
+   * Initializes the component and subscribes to the current language subject from the translation service.
+   * When the language changes, the `changePlaceholder` method is called with the new language as an argument.
+   *
+   * @return {void} This function does not return anything.
+   */
   ngOnInit() {
     this.translationService.currentLang$.subscribe(lang => {
       this.changePlaceholder(lang);
@@ -56,6 +62,16 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Submits the form if it is valid and not in test mode.
+   * If the form is valid and not in test mode, sends a POST request to the endpoint with the contact data.
+   * If the request is successful, logs 'send post complete' to the console.
+   * Resets the form after submission.
+   * If the form is valid and in test mode, resets the form.
+   *
+   * @param {NgForm} ngForm - The form to be submitted.
+   * @return {void} This function does not return anything.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -74,11 +90,22 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Emits the ngSubmit event of the provided NgForm.
+   *
+   * @param {NgForm} form - The NgForm whose ngSubmit event will be emitted.
+   */
   onExternalSubmit(form: NgForm) {
     form.ngSubmit.emit();
   }
 
 
+  /**
+   * Resets the form and clears the contact data.
+   *
+   * @param {NgForm} ngForm - The form to be reset.
+   * @return {void} This function does not return anything.
+   */
   resetForm(ngForm: NgForm) {
     ngForm.resetForm();
     this.changePlaceholder(this.translationService.getCurrentLanguage());
@@ -87,12 +114,25 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+/**
+ * Updates the source of the image element based on the value of the checkmark.
+ *
+ * @param {HTMLImageElement} img - The image element whose source will be updated.
+ * @return {void} This function does not return a value.
+ */
   onMouseOver(img: HTMLImageElement) {
     img.src = this.checkmark
       ? './assets/img/checkbox-checked-hover.png'
       : './assets/img/checkbox-unchecked-hover.png';
   }
+  
 
+  /**
+   * Updates the source of the image element based on the value of the checkmark.
+   *
+   * @param {HTMLImageElement} img - The image element whose source will be updated.
+   * @return {void} This function does not return a value.
+   */
   onMouseOut(img: HTMLImageElement) {
     img.src = this.checkmark
       ? './assets/img/checkbox-checked.png'
@@ -100,6 +140,12 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+/**
+ * Updates the placeholder text based on the language.
+ *
+ * @param {string} lang - The language code.
+ * @return {void}
+ */
   changePlaceholder(lang: string) {
     this.placeholderName = lang === 'de' ? 'Dein Name' : 'Your name';
     this.placeholderEmail = lang === 'de' ? 'Deine Email' : 'Your email';
@@ -107,6 +153,12 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Sets the placeholder texts to German language values.
+   *
+   * @param {} - No parameters.
+   * @return {} - No return value.
+   */
   contactPlaceholderGerman(){
     this.placeholderName = 'Dein Name';
     this.placeholderEmail = 'Deine Email';
@@ -114,6 +166,11 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Sets the placeholder text for the name, email, and message fields to their English translations.
+   *
+   * @return {void} This function does not return a value.
+   */
   contactPlaceholderEnglish(){
     this.placeholderName = 'Your name';
     this.placeholderEmail = 'Your email';
@@ -121,6 +178,12 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Clears the placeholder name if it matches 'Your name' or 'Dein Name'.
+   *
+   * @param {} - No parameters.
+   * @return {} - No return value.
+   */
   clearPlaceholderName() {
     if (this.placeholderName === 'Your name' || this.placeholderName === 'Dein Name') {
       this.placeholderName = ''; 
@@ -128,11 +191,24 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Checks if the name is valid.
+   *
+   * @return {boolean} True if the name is valid, false otherwise.
+   */
   isValidName(): boolean {
-    return this.contactData.name.length >= 2 && this.placeholderName !== 'Your name' && this.placeholderName !== 'Dein Name';
+    const minLength = 2;
+    const isPlaceholderName = this.placeholderName === 'Your name' || this.placeholderName === 'Dein Name';
+    return this.contactData.name.length >= minLength && !isPlaceholderName;
   }
 
 
+  /**
+   * Clears the placeholder email if it matches 'Your email' or 'Deine Email'.
+   *
+   * @param {} - No parameters.
+   * @return {} - No return value.
+   */
   clearPlaceholderEmail() {
     if (this.placeholderEmail === 'Your email' || this.placeholderEmail === 'Deine Email') {
       this.placeholderEmail = '';
@@ -140,12 +216,23 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Checks if the given email is valid.
+   *
+   * @param {string} email - The email to be validated.
+   * @return {boolean} True if the email is valid, false otherwise.
+   */
   isValidEmail(email: string): boolean {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   }
 
 
+/**
+ * Clears the placeholder message if it is equal to 'Your message' or 'Deine Nachricht'.
+ *
+ * @return {void} This function does not return a value.
+ */
   clearPlaceholderMessage() {
     if (this.placeholderMessage === 'Your message' || this.placeholderMessage === 'Deine Nachricht') {
       this.placeholderMessage = '';
@@ -153,20 +240,35 @@ export class ContactFormComponent implements OnInit {
   }
 
 
+  /**
+   * Checks if the message is valid.
+   *
+   * @return {boolean} True if the message is valid, false otherwise.
+   */
   isValidMessage(): boolean {
-    return this.contactData.message.length >= 5 && this.placeholderMessage !== 'Your message' && this.placeholderMessage !== 'Deine Nachricht';
+    const minLength = 5;
+    const isPlaceholderMessage = this.placeholderMessage === 'Your message' || this.placeholderMessage === 'Deine Nachricht';
+    return this.contactData.message.length >= minLength && !isPlaceholderMessage;
   }
 
 
+  /**
+   * Toggles the value of the checkmark property.
+   *
+   * This function updates the value of the `checkmark` property by negating its current value.
+   *
+   * @return {void} This function does not return a value.
+   */
   toggleCheckmark() {
-    if (this.checkmark == false) {
-      this.checkmark = true;
-    } else if (this.checkmark == true) {
-      this.checkmark = false;
-    }
+    this.checkmark = !this.checkmark;
   }
 
 
+  /**
+   * Navigates to the privacy policy page.
+   *
+   * @return {void} This function does not return a value.
+   */
   navigateToPrivacy() {
     this.router.navigate(['/privacy-policy']);
   }

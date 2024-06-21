@@ -10,7 +10,5 @@ import { HeaderComponent } from '../shared/header/header.component';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  // constructor() {
-  //   console.log('ImprintComponent initialized');
-  // }
+
 }

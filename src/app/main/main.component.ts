@@ -45,16 +45,22 @@ export class MainComponent {
   constructor(private app: AppComponent) {}
 
 
+/**
+ * Scrolls down to the contacts section.
+ *
+ * @return {void} This function does not return a value.
+ */
   scrollDown() {
     this.app.scrollToContacts();
   }
 
 
-  toggleMobile() {
-    if(this.isMenuOpen){
-      this.isMenuOpen = false;
-    } else {
-      this.isMenuOpen = true;
-    }
+  /**
+   * Toggles the menu open/closed by negating the current state.
+   *
+   * @return {void} This function does not return a value.
+   */
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
