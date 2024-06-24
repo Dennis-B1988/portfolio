@@ -16,6 +16,13 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
 
 
+  /**
+   * Initializes the component and subscribes to the router events. When a NavigationEnd event is
+   * emitted, it calls the smoothScrollTo method of the smoothScrollService to scroll to the top of
+   * the page.
+   *
+   * @return {void} This function does not return anything.
+   */
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

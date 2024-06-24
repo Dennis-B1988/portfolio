@@ -32,7 +32,7 @@ export class ContactFormComponent implements OnInit {
     message: ''
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://dennis-baust.com/sendMail.php',
