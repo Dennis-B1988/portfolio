@@ -42,6 +42,16 @@ export class ProjectsComponent {
       hover: false,
     },
     {
+      image: './assets/img/chat-app.jpg',
+      image_hover: './assets/img/chat-app-screenshot.png',
+      name: 'Chat-App',
+      url: 'https://chat-app.dennis-baust.com/',
+      github: 'https://github.com/Dennis-B1988/chat-app',
+      description: 'Chat application that allows users to connect and communicate with each other.',
+      skills: 'React | Javascript | Redux | Styled Components',
+      hover: false,
+    },
+    {
       image: './assets/img/portfolio.png',
       image_hover: './assets/img/portfolio-screenshot.png',
       name: 'Portfolio',

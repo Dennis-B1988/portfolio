@@ -1,64 +1,65 @@
 {
-    "header": {
-        "about": "Über mich",
-        "skills": "Skills",
-        "portfolio": "Portfolio",
-        "contact": "Kontakt"
-    },
+  "header": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
 
-    "main": {
-        "title": "Ich bin",
-        "job": "FRONTEND ENTWICKLER",
-        "button": "Lass uns reden!"
-    },
+  "main": {
+    "title": "Ich bin",
+    "job": "FRONTEND ENTWICKLER",
+    "button": "Lass uns reden!"
+  },
 
-    "socials": {
-        "scroll": "Runterscrollen"
-    },
+  "socials": {
+    "scroll": "Runterscrollen"
+  },
 
-    "aboutMe": {
-        "title": "Über mich",
-        "description": "Ich bin ein Front-End-Entwickler mit Sitz in Walldorf, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden.",
-        "contactMe": "Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
-        "informationOne": "Mit jahrelanger Erfahrung als IT-Systemadministrator und einer tiefen Faszination für die Welt der IT bringe ich sowohl Expertise als auch Leidenschaft in jedes Projekt ein.",
-        "informationTwo": "Als Front-End Webentwickler möchte ich neue Dinge kreieren und innovative Projekte realisieren. Mit Fokus auf Design und Benutzerfreundlichkeit strebe ich danach, ansprechende und intuitive Webanwendungen zu entwickeln, die Benutzer begeistern."
-    },
+  "aboutMe": {
+    "title": "Über mich",
+    "description": "Ich bin ein Front-End-Entwickler mit Sitz in Walldorf, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden.",
+    "contactMe": "Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
+    "informationOne": "Mit jahrelanger Erfahrung als IT-Systemadministrator und einer tiefen Faszination für die Welt der IT bringe ich sowohl Expertise als auch Leidenschaft in jedes Projekt ein.",
+    "informationTwo": "Als Front-End Webentwickler möchte ich neue Dinge kreieren und innovative Projekte realisieren. Mit Fokus auf Design und Benutzerfreundlichkeit strebe ich danach, ansprechende und intuitive Webanwendungen zu entwickeln, die Benutzer begeistern."
+  },
 
-    "skills": {
-        "title": "Skills",
-        "description": "Ich habe Erfahrung in der Erstellung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
-        "button": "Kontaktaufnahme"
-    },
+  "skills": {
+    "title": "Skills",
+    "description": "Ich habe Erfahrung in der Erstellung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.",
+    "button": "Kontaktaufnahme"
+  },
 
-    "portfolio": {
-        "title": "Portfolio",
-        "description": "Diese Seite ist ein Beispiel für meine Arbeit! Scrollen Sie nach unten, um andere Projekte zu sehen, die ich entwickelt habe.",
-        "el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
-        "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-        "pokedex": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
-        "portfolio": "Portfolio für meine Arbeit! Zeigt meine Projekte und Fähigkeiten."
-    },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Diese Seite ist ein Beispiel für meine Arbeit! Scrollen Sie nach unten, um andere Projekte zu sehen, die ich entwickelt habe.",
+    "el_pollo_loco": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+    "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    "pokedex": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
+    "chat-app": "Chat-Anwendung, die es Nutzern ermöglicht, miteinander in Kontakt zu treten und zu kommunizieren.",
+    "portfolio": "Portfolio für meine Arbeit! Zeigt meine Projekte und Fähigkeiten."
+  },
 
-    "contact": {
-        "title": "Kontakt",
-        "problem": "Haben Sie ein Problem zu lösen?",
-        "contactText": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
-        "hireMe": "Brauchen Sie einen Frontend-Entwickler? ",
-        "contactMe": "Kontaktieren Sie mich!",
-        "formName": "Dein Name",
-        "formEmail": "Deine Email",
-        "formMessage": "Deine Nachricht",
-        "nameRequired": "Name erforderlich",
-        "emailRequired": "Email erforderlich",
-        "messageRequired": "Nachricht erforderlich",
-        "privacyPartOne": "Ich habe die",
-        "privacy": "Datenschutzrichtlinien ",
-        "privacyPartTwo": "und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
-        "button": "Nachricht senden",
-        "send": "Nachricht gesendet!"
-    },
+  "contact": {
+    "title": "Kontakt",
+    "problem": "Haben Sie ein Problem zu lösen?",
+    "contactText": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "hireMe": "Brauchen Sie einen Frontend-Entwickler? ",
+    "contactMe": "Kontaktieren Sie mich!",
+    "formName": "Dein Name",
+    "formEmail": "Deine Email",
+    "formMessage": "Deine Nachricht",
+    "nameRequired": "Name erforderlich",
+    "emailRequired": "Email erforderlich",
+    "messageRequired": "Nachricht erforderlich",
+    "privacyPartOne": "Ich habe die",
+    "privacy": "Datenschutzrichtlinien ",
+    "privacyPartTwo": "und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden.",
+    "button": "Nachricht senden",
+    "send": "Nachricht gesendet!"
+  },
 
-    "footer": {
-        "imprint": "Impressum"
-    }
+  "footer": {
+    "imprint": "Impressum"
+  }
 }
