@@ -12,14 +12,14 @@ import { Portfolio } from "../../../interfaces/interfaces.component";
 export class ProjectsComponent {
   project: Portfolio[] = [
     {
-      image: "./assets/img/el_pollo_loco.png",
-      image_hover: "./assets/img/el_pollo_loco-screenshot.png",
-      name: "El Pollo Loco",
-      url: "https://el-pollo-loco.dennis-baust.com/",
-      github: "https://github.com/Dennis-B1988/EL_POLLO_LOCO",
+      image: "./assets/img/join.png",
+      image_hover: "./assets/img/join-screenshot.png",
+      name: "Join",
+      url: "https://join.dennis-baust.com/",
+      github: "https://github.com/Dennis-B1988/join-task-manager",
       description:
-        "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      skills: "JavaScript | HTML | CSS",
+        "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      skills: "Angular | Typescript | HTML | SCSS | Firebase",
       hover: false,
     },
     {
@@ -34,6 +34,18 @@ export class ProjectsComponent {
       hover: false,
     },
     {
+      image: "./assets/img/el_pollo_loco.png",
+      image_hover: "./assets/img/el_pollo_loco-screenshot.png",
+      name: "El Pollo Loco",
+      url: "https://el-pollo-loco.dennis-baust.com/",
+      github: "https://github.com/Dennis-B1988/EL_POLLO_LOCO",
+      description:
+        "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      skills: "JavaScript | HTML | CSS",
+      hover: false,
+    },
+
+    {
       image: "./assets/img/chat-app.jpg",
       image_hover: "./assets/img/chat-app-screenshot.png",
       name: "Chat-App",
@@ -42,17 +54,6 @@ export class ProjectsComponent {
       description:
         "Chat application that allows users to connect and communicate with each other.",
       skills: "React | Javascript | Redux | Styled Components",
-      hover: false,
-    },
-    {
-      image: "./assets/img/join.png",
-      image_hover: "./assets/img/join-screenshot.png",
-      name: "Join",
-      url: "https://join.dennis-baust.com/",
-      github: "https://github.com/Dennis-B1988/join",
-      description:
-        "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      skills: "JavaScript | HTML | CSS",
       hover: false,
     },
     {
