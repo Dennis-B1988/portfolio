@@ -1,17 +1,17 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { TranslateModule } from "@ngx-translate/core";
-import { AppComponent } from "../../app.component";
 import { Skills } from "../../interfaces/interfaces.component";
+import { SmoothScrollService } from "../../service/smooth-scroll/smooth-scroll.service";
 
 @Component({
   selector: "app-skills",
   standalone: true,
-  imports: [AppComponent, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: "./skills.component.html",
   styleUrl: "./skills.component.scss",
 })
 export class SkillsComponent {
-  constructor(private app: AppComponent) {}
+  private smoothScrollService = inject(SmoothScrollService);
 
   skill: Skills[] = [
     {
@@ -61,6 +61,6 @@ export class SkillsComponent {
    *
    */
   scrollDown() {
-    this.app.scrollToContacts();
+    this.smoothScrollService.scrollToContacts();
   }
 }

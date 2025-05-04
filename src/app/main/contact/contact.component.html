@@ -41,7 +41,7 @@
     <div
       class="contact-send-success"
       [@sendSuccessAnimation]="
-        this.sendMessage.sendSuccessVisible ? 'visible' : 'hidden'
+        sendMessage.sendSuccessVisible() ? 'visible' : 'hidden'
       "
     >
       {{ "contact.send" | translate }}

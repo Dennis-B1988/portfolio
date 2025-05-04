@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SmoothScrollService {
-
-  constructor() { }
+  constructor() {}
 
   /**
    * Scrolls the window to the specified position smoothly.
@@ -16,7 +15,20 @@ export class SmoothScrollService {
     window.scrollTo({
       top: y,
       left: x,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
+  }
+
+  /**
+   * Smoothly scrolls the window to the contacts section.
+   *
+   * This function retrieves the element with the ID 'contacts' and, if found,
+   * smoothly scrolls it into the viewport.
+   */
+  scrollToContacts() {
+    const element = document.getElementById("contacts");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   }
 }

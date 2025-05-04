@@ -1,8 +1,8 @@
 import { Component, inject } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
-import { AppComponent } from "../app.component";
 import { CheckLanguageService } from "../service/check-language/check-language.service";
+import { SmoothScrollService } from "../service/smooth-scroll/smooth-scroll.service";
 import { TranslationService } from "../service/translation.service";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { HeaderComponent } from "../shared/header/header.component";
@@ -25,7 +25,6 @@ import { SocialsComponent } from "./socials-scroll/socials/socials.component";
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
-    AppComponent,
     RouterModule,
     TranslateModule,
   ],
@@ -33,13 +32,12 @@ import { SocialsComponent } from "./socials-scroll/socials/socials.component";
   styleUrl: "./main.component.scss",
 })
 export class MainComponent {
-  currentRoute: string = "";
-  isMenuOpen = false;
-
+  private smoothScrollService = inject(SmoothScrollService);
   translate = inject(TranslationService);
   languages = inject(CheckLanguageService);
 
-  constructor(private app: AppComponent) {}
+  currentRoute: string = "";
+  // isMenuOpen = false;
 
   /**
    * Scrolls down to the contacts section.
@@ -47,7 +45,7 @@ export class MainComponent {
    * @return {void} This function does not return a value.
    */
   scrollDown() {
-    this.app.scrollToContacts();
+    this.smoothScrollService.scrollToContacts();
   }
 
   /**
@@ -55,7 +53,7 @@ export class MainComponent {
    *
    * @return {void} This function does not return a value.
    */
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
+  // toggleMenu() {
+  //   this.isMenuOpen = !this.isMenuOpen;
+  // }
 }

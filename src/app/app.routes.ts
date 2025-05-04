@@ -1,29 +1,32 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ImprintComponent } from './imprint/imprint.component';
-import { MainComponent } from './main/main.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: MainComponent
-    },
-    {
-        path: 'privacy-policy',
-        component: PrivacyPolicyComponent
-    },
-    {
-        path: 'imprint',
-        component: ImprintComponent
-    }
+  {
+    path: "",
+    loadComponent: () =>
+      import("./main/main.component").then((m) => m.MainComponent),
+  },
+  {
+    path: "privacy-policy",
+    loadComponent: () =>
+      import("./privacy-policy/privacy-policy.component").then(
+        (m) => m.PrivacyPolicyComponent,
+      ),
+  },
+  {
+    path: "imprint",
+    loadComponent: () =>
+      import("./imprint/imprint.component").then((m) => m.ImprintComponent),
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {
-        scrollPositionRestoration: 'top',
-    })],
-    exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: "top",
+    }),
+  ],
+  exports: [RouterModule],
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

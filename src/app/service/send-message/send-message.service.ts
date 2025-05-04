@@ -1,11 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SendMessageService {
-
-  sendSuccessVisible = false;
-
-  constructor() { }
+  sendSuccessVisible = signal<boolean>(false);
 }
