@@ -37,7 +37,6 @@ export class MainComponent {
   languages = inject(CheckLanguageService);
 
   currentRoute: string = "";
-  // isMenuOpen = false;
 
   /**
    * Scrolls down to the contacts section.
@@ -47,13 +46,4 @@ export class MainComponent {
   scrollDown() {
     this.smoothScrollService.scrollToContacts();
   }
-
-  /**
-   * Toggles the menu open/closed by negating the current state.
-   *
-   * @return {void} This function does not return a value.
-   */
-  // toggleMenu() {
-  //   this.isMenuOpen = !this.isMenuOpen;
-  // }
 }
