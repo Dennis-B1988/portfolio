@@ -19,6 +19,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import("./imprint/imprint.component").then((m) => m.ImprintComponent),
   },
+  {
+    path: "**",
+    redirectTo: "",
+  },
 ];
 
 @NgModule({
