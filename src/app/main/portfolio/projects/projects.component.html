@@ -1,43 +1,47 @@
 @for (project of project; track $index) {
-<div class="project-content" (mouseover)="project.hover = true" (mouseout)="project.hover = false">
-  <div class="project-image" [class.hover]="project.hover">
-    <img src="{{ project.image }}" alt="" />
-  </div>
-  <div class="project-image-hover" [class.hover]="project.hover">
-    <img src="{{ project.image_hover }}" alt="" />
-
-    <div class="project-buttons">
-      <a href="{{ project.github }}" target="_blank" class="project-github">Github</a>
-      @if(project.name != "Portfolio"){
-      <a href="{{ project.url }}" target="_blank" class="project-live-test">Live test</a>
-      }
+  <div
+    class="project-content"
+    (mouseover)="project.hover = true"
+    (mouseout)="project.hover = false"
+  >
+    <div class="project-image" [class.hover]="project.hover">
+      <img src="{{ project.image }}" alt="" />
     </div>
+    <div class="project-image-hover" [class.hover]="project.hover">
+      <img src="{{ project.image_hover }}" alt="" />
 
-    <div class="project-text">
-      <span class="project-name">{{ project.name }}</span>
-      @if (project.name == "El Pollo Loco") {
-      <span class="project-description">{{
-        "portfolio.el_pollo_loco" | translate
-        }}</span>
-      } @else if (project.name == "Join") {
-      <span class="project-description">{{
-        "portfolio.join" | translate
-        }}</span>
-      } @else if (project.name == "Pokédex") {
-      <span class="project-description">{{
-        "portfolio.pokedex" | translate
-        }}</span>
-      } @else if (project.name == "Chat-App") {
-      <span class="project-description">{{
-        "portfolio.chat-app" | translate
-        }}</span>
-      } @else if (project.name == "Portfolio") {
-      <span class="project-description">{{
-        "portfolio.portfolio" | translate
-        }}</span>
-      }
-      <span class="project-skills">{{ project.skills }}</span>
+      <div class="project-buttons">
+        <a href="{{ project.github }}" target="_blank" class="project-github"
+          >Github</a
+        >
+        @if (project.name != "Portfolio") {
+          <a href="{{ project.url }}" target="_blank" class="project-live-test"
+            >Live test</a
+          >
+        }
+      </div>
+
+      <div class="project-text">
+        <span class="project-name">{{ project.name }}</span>
+        @if (project.name == "El Pollo Loco") {
+          <span class="project-description">{{
+            "portfolio.el_pollo_loco" | translate
+          }}</span>
+        } @else if (project.name == "Join") {
+          <span class="project-description">{{
+            "portfolio.join" | translate
+          }}</span>
+        } @else if (project.name == "Pokédex") {
+          <span class="project-description">{{
+            "portfolio.pokedex" | translate
+          }}</span>
+        } @else if (project.name == "Chat-App") {
+          <span class="project-description">{{
+            "portfolio.chat-app" | translate
+          }}</span>
+        }
+        <span class="project-skills">{{ project.skills }}</span>
+      </div>
     </div>
   </div>
-</div>
 }

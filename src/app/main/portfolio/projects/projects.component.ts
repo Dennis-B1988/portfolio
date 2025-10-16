@@ -56,15 +56,5 @@ export class ProjectsComponent {
       skills: "React | Javascript | Redux | Styled Components",
       hover: false,
     },
-    {
-      image: "./assets/img/portfolio.png",
-      image_hover: "./assets/img/portfolio-screenshot.png",
-      name: "Portfolio",
-      url: "https://dennis-baust.com/",
-      github: "https://github.com/Dennis-B1988/portfolio",
-      description: "Portfolio for my work! Displays my projects and skills.",
-      skills: "Angular | Typescript | HTML | CSS",
-      hover: false,
-    },
   ];
 }
