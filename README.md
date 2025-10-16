@@ -1,4 +1,4 @@
-[![ci](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml/badge.svg?event=status)](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml)
+[![ci](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml)
 
 # Portfolio
 
