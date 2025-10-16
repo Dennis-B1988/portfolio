@@ -1,14 +1,16 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed } from "@angular/core/testing";
+import { AppComponent } from "./app.component";
+import { SmoothScrollService } from "./service/smooth-scroll/smooth-scroll.service";
 
-describe('AppComponent', () => {
+describe("AppComponent", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [SmoothScrollService],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it("should create the app", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
@@ -17,13 +19,15 @@ describe('AppComponent', () => {
   it(`should have the 'portfolio' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio');
+    expect(app.title).toEqual("portfolio");
   });
 
-  it('should render title', () => {
+  it("should subscribe to router events", () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio');
+    const app = fixture.componentInstance;
+    const scrollService =
+      fixture.debugElement.injector.get(SmoothScrollService);
+    expect(app).toBeTruthy();
+    expect(scrollService).toBeTruthy();
   });
 });

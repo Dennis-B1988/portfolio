@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ScrollDownComponent } from './scroll-down.component';
+import { provideDefaultMocks } from "../../../../tests/mocks";
+import { ScrollDownComponent } from "./scroll-down.component";
 
-describe('ScrollDownComponent', () => {
+describe("ScrollDownComponent", () => {
   let component: ScrollDownComponent;
   let fixture: ComponentFixture<ScrollDownComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ScrollDownComponent]
-    })
-    .compileComponents();
-    
+      imports: [ScrollDownComponent],
+      providers: [...provideDefaultMocks()],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ScrollDownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
