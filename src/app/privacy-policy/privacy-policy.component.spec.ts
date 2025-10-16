@@ -1,23 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PrivacyPolicyComponent } from './privacy-policy.component';
+import { provideDefaultMocks } from "../../tests/mocks";
+import { SmoothScrollService } from "../service/smooth-scroll/smooth-scroll.service";
+import { PrivacyPolicyComponent } from "./privacy-policy.component";
 
-describe('PrivacyPolicyComponent', () => {
+describe("PrivacyPolicyComponent", () => {
   let component: PrivacyPolicyComponent;
   let fixture: ComponentFixture<PrivacyPolicyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrivacyPolicyComponent]
-    })
-    .compileComponents();
-    
+      imports: [PrivacyPolicyComponent],
+      providers: [SmoothScrollService, ...provideDefaultMocks()],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PrivacyPolicyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

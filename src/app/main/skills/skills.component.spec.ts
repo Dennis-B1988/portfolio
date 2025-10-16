@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SkillsComponent } from './skills.component';
+import { provideDefaultMocks } from "../../../tests/mocks";
+import { SkillsComponent } from "./skills.component";
 
-describe('SkillsComponent', () => {
+describe("SkillsComponent", () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SkillsComponent]
-    })
-    .compileComponents();
-    
+      imports: [SkillsComponent],
+      providers: [...provideDefaultMocks()],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(SkillsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
