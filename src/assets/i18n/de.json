@@ -8,7 +8,7 @@
 
   "main": {
     "title": "Ich bin",
-    "job": "FRONTEND ENTWICKLER",
+    "job": "WEBENTWICKLER",
     "button": "Lass uns reden!"
   },
 
@@ -18,10 +18,10 @@
 
   "aboutMe": {
     "title": "Über mich",
-    "description": "Ich bin ein Front-End-Entwickler mit Sitz in Walldorf, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden.",
+    "description": "Ich bin ein Webentwickler mit Sitz in Walldorf, Deutschland. Es macht mir Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen. Ich freue mich darauf, meine Karriere als Entwickler fortzusetzen und eine Stelle als Junior-Webentwickler zu finden.",
     "contactMe": "Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
-    "informationOne": "Mit jahrelanger Erfahrung als IT-Systemadministrator und einer tiefen Faszination für die Welt der IT bringe ich sowohl Expertise als auch Leidenschaft in jedes Projekt ein.",
-    "informationTwo": "Als Front-End Webentwickler möchte ich neue Dinge kreieren und innovative Projekte realisieren. Mit Fokus auf Design und Benutzerfreundlichkeit strebe ich danach, ansprechende und intuitive Webanwendungen zu entwickeln, die Benutzer begeistern."
+    "informationOne": "Mit mehrjähriger Erfahrung als IT-Systemadministrator und einer tiefen Faszination für die Welt der IT bringe ich sowohl Expertise als auch Leidenschaft in jedes Projekt ein.",
+    "informationTwo": "Als Webentwickler möchte ich neue Dinge kreieren und innovative Projekte realisieren. Mit Fokus auf Design und Benutzerfreundlichkeit strebe ich danach, ansprechende und intuitive Webanwendungen zu entwickeln, die Benutzer begeistern."
   },
 
   "skills": {
@@ -44,7 +44,7 @@
     "title": "Kontakt",
     "problem": "Haben Sie ein Problem zu lösen?",
     "contactText": "Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen zu erfahren und mit meiner Arbeit zu Ihren Projekten beizutragen.",
-    "hireMe": "Brauchen Sie einen Frontend-Entwickler? ",
+    "hireMe": "Brauchen Sie einen Webentwickler mit Frontend Kenntnissen?",
     "contactMe": "Kontaktieren Sie mich!",
     "formName": "Dein Name",
     "formEmail": "Deine Email",

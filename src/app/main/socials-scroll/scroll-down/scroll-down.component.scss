@@ -1,19 +1,23 @@
+:host {
+  width: 200px;
+}
+
 .scroll-down {
-    font-size: 23px;
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    padding-right: 50px;
-    position: relative;
-    transform: rotate(90deg);
-    >img {
-        height: 16px;
-        width: 16px;
-    }
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding-right: 50px;
+  position: relative;
+  transform: rotate(90deg);
+  > img {
+    height: 16px;
+    width: 16px;
+  }
 }
 
 @media (max-width: 767px) {
-    .scroll-down {
-        display: none;
-    }
+  .scroll-down {
+    display: none;
+  }
 }
