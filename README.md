@@ -14,8 +14,9 @@ A modern, responsive portfolio website showcasing my projects and skills.
 
 ## Tech Stack
 
-- HTML5 & CSS3
-- JavaScript (ES6+)
+- HTML5 & SCSS
+- Angular 18
+- Typescript
 - Responsive design principles
 
 ## Contact
