@@ -1,5 +1,3 @@
-[![ci](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/Dennis-B1988/portfolio/actions/workflows/ci.yml)
-
 # Portfolio
 
 A modern, responsive portfolio website showcasing my projects and skills.

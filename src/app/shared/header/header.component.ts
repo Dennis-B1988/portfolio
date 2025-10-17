@@ -92,7 +92,6 @@ export class HeaderComponent implements OnInit {
    *
    * @return {void} This function does not return anything.
    */
-
   checkWindowSize() {
     if (window.innerWidth > 767) {
       this.burgerMenuOpen = false;

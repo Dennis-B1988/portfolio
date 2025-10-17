@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { provideDefaultMocks } from "../../../tests/mocks";
+import { SmoothScrollService } from "../../service/smooth-scroll/smooth-scroll.service";
 import { HeaderComponent } from "./header.component";
 
 describe("HeaderComponent", () => {
@@ -20,5 +21,11 @@ describe("HeaderComponent", () => {
 
   it("should create", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should call checkWindowSize on window resize", () => {
+    const spy = spyOn(component, "checkWindowSize");
+    window.dispatchEvent(new Event("resize"));
+    expect(spy).toHaveBeenCalled();
   });
 });
