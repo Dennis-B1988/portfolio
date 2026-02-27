@@ -22,4 +22,11 @@ describe("PrivacyPolicyComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+
+  it("should scroll to the top after view init", () => {
+    const smoothScrollService = TestBed.inject(SmoothScrollService);
+    const spy = spyOn(smoothScrollService, "smoothScrollTo");
+    component.ngAfterViewInit();
+    expect(spy).toHaveBeenCalledWith(0, 0);
+  });
 });

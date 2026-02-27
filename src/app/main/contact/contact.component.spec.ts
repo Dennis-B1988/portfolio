@@ -23,4 +23,10 @@ describe("ContactComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+
+  it("should call showSendSuccess", () => {
+    const spy = spyOn(component, "showSendSuccess");
+    component.showSendSuccess();
+    expect(spy).toHaveBeenCalled();
+  });
 });
