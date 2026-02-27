@@ -34,7 +34,7 @@ export class ContactFormComponent implements OnInit {
   mailTest: boolean = false;
 
   post = {
-    endPoint: "https://dennis-baust.com/sendMail.php",
+    endPoint: "https://www.dennis-baust.com/sendMail.php",
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
